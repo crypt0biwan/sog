@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spells of Genesis</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        .custom-font { font-family: 'Great Vibes', cursive; }
+        .form-divider { font-size: 36pt; text-transform: uppercase; }
+        .card { width: 12rem; }
+        .card h5 { font-size: 1.10rem; }
+        .popover-body img { width: auto; max-width: 100%; }
+    </style>
+</head>
+    <body>
+        <div class="container mb-3">
+            <h3>Spells of Genesis</h3>
+
+            <p>
+                <i>
+                    When you put in your address below it queries which Spells of Genesis cards are in that addres and which cards are missing.<br />
+                    The table headers are clickable so you can easily sort<br />
+                    You can also compare 2 addresses when you fill in both inputs.
+                </i>
+            </p>
+        </div>
+
+        <form>
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="mb-2">
+                            <label for="btcAddress" class="form-label"><strong>Check address</strong></label>
+                            <!-- Using Hal Finneys address from the first BTC tx as a placeholder :-) -->
+                            <input type="text" required class="form-control" id="btcAddress" placeholder="1Q2TWHE3GMdB6BZKafqwxXtWAWgFt5Jvm3">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary btn-balances mb-3">Check balances</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-flex flex-wrap justify-content-center">
+                        <div class="pt-3 custom-font form-divider">- or -</div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="mb-2">
+                            <label for="compareAddress" class="form-label"><strong>Compare to this address</strong></label>
+                            <!-- Using Hal Finneys address from the first BTC tx as a placeholder :-) -->
+                            <input type="text" class="form-control" id="compareAddress" placeholder="1Q2TWHE3GMdB6BZKafqwxXtWAWgFt5Jvm3">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary btn-compare mb-3">Compare balances</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="container mb-5">
+            <div id="result"></div>
+            <div id="result_missing" style="display: none;"></div>
+        </div>
+        
+        <div class="container text-center">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-12 d-flex align-items-center">
+                    <span class="text-muted">Made by obi, source: <a target="_blank" href="https://github.com/crypt0biwan/sog">github</a>, contact: <a target="_blank" href="https://twitter.com/crypt0biwan">twitter</a>, donations: 1obiAgwKHdqrv135uzHH81Pz7MGG1sqvw</span>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/tablesort.min.js"></script>
+        <script>
+            const API_URL = 'https://xchain.io/api/'
+            const cards = [
+                { "name": "FDCARD", "supply": 300, "date": "2015-03-11", "img_url": "img/FDCARD.jpg" },
+                { "name": "SJCXCARD", "supply": 1000, "date": "2015-06-01", "img_url": "img/SJCXCARD.jpg" },
+                { "name": "GEMZCARD", "supply": 1000, "date": "2015-06-02", "img_url": "img/GEMZCARD.jpg" },
+                { "name": "CLEFCARD", "supply": 1000, "date": "2015-06-24", "img_url": "img/CLEFCARD.jpg" },
+                { "name": "XCPCARD", "supply": 1000, "date": "2015-06-24", "img_url": "img/XCPCARD.jpg" },
+                { "name": "ETHEREUMCARD", "supply": 1000, "date": "2015-06-24", "img_url": "img/ETHEREUMCARD.jpg" },
+                { "name": "SHAPESHIFTCD", "supply": 1000, "date": "2015-06-24", "img_url": "img/SHAPESHIFTCD.jpg" },
+                { "name": "SATOSHICARD", "supply": 1000, "date": "2015-06-24", "img_url": "img/SATOSHICARD.jpg" },
+                { "name": "RIPPLECARD", "supply": 1000, "date": "2015-07-05", "img_url": "img/RIPPLECARD.jpg" },
+                { "name": "GENESISCARD", "supply": 1000, "date": "2015-07-05", "img_url": "img/GENESISCARD.jpg" },
+                { "name": "SWARMCD", "supply": 1000, "date": "2015-07-06", "img_url": "img/SWARMCD.jpg" },
+                { "name": "CNPCARD", "supply": 1000, "date": "2015-07-17", "img_url": "img/CNPCARD.jpg" },
+                { "name": "SHUMAICARD", "supply": 1000, "date": "2015-07-17", "img_url": "img/SHUMAICARD.jpg" },
+                { "name": "BEARWHALECD", "supply": 3000, "date": "2015-07-24", "img_url": "img/BEARWHALECD.jpg" },
+                { "name": "BLOCKSIZECD", "supply": 300, "date": "2015-08-27", "img_url": "img/BLOCKSIZECD.jpg" },
+                { "name": "ETHXCPCARD", "supply": 1000, "date": "2015-09-20", "img_url": "img/ETHXCPCARD.jpg" },
+                { "name": "LTBCARD", "supply": 1000, "date": "2015-10-06", "img_url": "img/LTBCARD.jpg" },
+                { "name": "XAJIBESAAR", "supply": 500, "date": "2015-10-12", "img_url": "img/XAJIBESAAR.jpg" },
+                { "name": "XAJIJASPAAR", "supply": 1000, "date": "2015-10-12", "img_url": "img/XAJIJASPAAR.jpg" },
+                { "name": "XAJIBASILAAR", "supply": 2000, "date": "2015-10-12", "img_url": "img/XAJIBASILAAR.jpg" },
+                { "name": "ZAIFCARD", "supply": 1000, "date": "2015-10-13", "img_url": "img/ZAIFCARD.jpg" },
+                { "name": "BAZAARCARD", "supply": 1000, "date": "2015-10-21", "img_url": "img/BAZAARCARD.jpg" },
+                { "name": "CARDAUGUR", "supply": 1200, "date": "2015-10-23", "img_url": "img/CARDAUGUR.jpg" },
+                { "name": "WHEREBCYCARD", "supply": 700, "date": "2015-10-23", "img_url": "img/WHEREBCYCARD.jpg" },
+                { "name": "CARDAIRBITZ", "supply": 1200, "date": "2015-10-23", "img_url": "img/CARDAIRBITZ.jpg" },
+                { "name": "XAJIARKETAAR", "supply": 700, "date": "2015-10-26", "img_url": "img/XAJIARKETAAR.jpg" },
+                { "name": "GOXCARD", "supply": 1200, "date": "2015-10-28", "img_url": "img/GOXCARD.jpg" },
+                { "name": "XAJIYEREMAAR", "supply": 600, "date": "2015-11-02", "img_url": "img/XAJIYEREMAAR.jpg" },
+                { "name": "MINERCARD", "supply": 1200, "date": "2015-11-04", "img_url": "img/MINERCARD.jpg" },
+                { "name": "BCYDRAGON", "supply": 300, "date": "2015-11-16", "img_url": "img/BCYDRAGON.jpg" },
+                { "name": "BTCDRAGONCD", "supply": 800, "date": "2015-11-16", "img_url": "img/BTCDRAGONCD.jpg" },
+                { "name": "CARDASTEMA", "supply": 1200, "date": "2015-11-23", "img_url": "img/CARDASTEMA.jpg" },
+                { "name": "XAJIBOSS", "supply": 300, "date": "2015-11-26", "img_url": "img/XAJIBOSS.jpg" },
+                { "name": "TALISMANCARD", "supply": 400, "date": "2015-12-02", "img_url": "img/TALISMANCARD.jpg" },
+                { "name": "DOGECOINCARD", "supply": 1200, "date": "2015-12-07", "img_url": "img/DOGECOINCARD.jpg" },
+                { "name": "EMERALDCARD", "supply": 800, "date": "2015-12-10", "img_url": "img/EMERALDCARD.jpg" },
+                { "name": "CARDAMBER", "supply": 800, "date": "2015-12-10", "img_url": "img/CARDAMBER.jpg" },
+                { "name": "WAGATECARD", "supply": 800, "date": "2015-12-10", "img_url": "img/WAGATECARD.jpg" },
+                { "name": "RUBYCARD", "supply": 800, "date": "2015-12-10", "img_url": "img/RUBYCARD.jpg" },
+                { "name": "SAPPHIRECARD", "supply": 800, "date": "2015-12-10", "img_url": "img/SAPPHIRECARD.jpg" },
+                { "name": "SGDARKNESS", "supply": 600, "date": "2015-12-10", "img_url": "img/SGDARKNESS.jpg" },
+                { "name": "BLOCKTRAILCD", "supply": 1200, "date": "2015-12-10", "img_url": "img/BLOCKTRAILCD.jpg" },
+                { "name": "SARUTOBICARD", "supply": 1600, "date": "2015-12-19", "img_url": "img/SARUTOBICARD.jpg" },
+                { "name": "GOBLINCARD", "supply": 1200, "date": "2016-01-27", "img_url": "img/GOBLINCARD.jpg" },
+                { "name": "SATOSHILITE", "supply": 500, "date": "2016-02-03", "img_url": "img/SATOSHILITE.jpg" },
+                { "name": "SAYOSIATAX", "supply": 1200, "date": "2016-02-11", "img_url": "img/SAYOSIATAX.jpg" },
+                { "name": "DARYENCARD", "supply": 1000, "date": "2016-02-18", "img_url": "img/DARYENCARD.jpg" },
+                { "name": "A9298018348897857870", "supply": 10000, "date": "2016-02-19", "img_url": "img/A9298018348897857870.jpg" },
+                { "name": "LTCDRAGON", "supply": 1000, "date": "2016-03-02", "img_url": "img/LTCDRAGON.jpg" },
+                { "name": "COINOFLITECD", "supply": 1000, "date": "2016-03-15", "img_url": "img/COINOFLITECD.jpg" },
+                { "name": "SHIELDWALLCD", "supply": 700, "date": "2016-03-15", "img_url": "img/SHIELDWALLCD.jpg" },
+                { "name": "MAIDSAFECD", "supply": 700, "date": "2016-04-05", "img_url": "img/MAIDSAFECD.jpg" },
+                { "name": "SHOPKEEPERCD", "supply": 2000, "date": "2016-04-13", "img_url": "img/SHOPKEEPERCD.jpg" },
+                { "name": "FOOTSOLDIER", "supply": 3000, "date": "2016-04-14", "img_url": "img/FOOTSOLDIER.jpg" },
+                { "name": "BITSHARESCD", "supply": 1200, "date": "2016-04-18", "img_url": "img/BITSHARESCD.jpg" },
+                { "name": "CYCLOPSCARD", "supply": 2100, "date": "2016-04-26", "img_url": "img/CYCLOPSCARD.jpg" },
+                { "name": "KEEPKEYCARD", "supply": 800, "date": "2016-05-02", "img_url": "img/KEEPKEYCARD.jpg" },
+                { "name": "SADICARD", "supply": 600, "date": "2016-05-09", "img_url": "img/SADICARD.jpg" },
+                { "name": "CCMCARD", "supply": 300, "date": "2016-05-13", "img_url": "img/CCMCARD.jpg" },
+                { "name": "DASHCD", "supply": 1200, "date": "2016-05-13", "img_url": "img/DASHCD.jpg" },
+                { "name": "FLYINGBLAZE", "supply": 1000, "date": "2016-05-23", "img_url": "img/FLYINGBLAZE.jpg" },
+                { "name": "MAYALCARD", "supply": 400, "date": "2016-05-30", "img_url": "img/MAYALCARD.jpg" },
+                { "name": "XULNOCCARD", "supply": 800, "date": "2016-06-08", "img_url": "img/XULNOCCARD.jpg" },
+                { "name": "DAOSOGCARD", "supply": 600, "date": "2016-06-15", "img_url": "img/DAOSOGCARD.jpg" },
+                { "name": "GNOMECARD", "supply": 2000, "date": "2016-06-22", "img_url": "img/GNOMECARD.jpg" },
+                { "name": "WATERSCOURT", "supply": 3500, "date": "2016-06-23", "img_url": "img/WATERSCOURT.jpg" },
+                { "name": "EDSCARD", "supply": 600, "date": "2016-06-29", "img_url": "img/EDSCARD.jpg" },
+                { "name": "VANBEXCARD", "supply": 600, "date": "2016-07-05", "img_url": "img/VANBEXCARD.jpg" },
+                { "name": "TROLLSCLUBCD", "supply": 1200, "date": "2016-07-12", "img_url": "img/TROLLSCLUBCD.jpg" },
+                { "name": "KRAKENCARD", "supply": 800, "date": "2016-07-19", "img_url": "img/KRAKENCARD.jpg" },
+                { "name": "WEASELSCARD", "supply": 1000, "date": "2016-07-26", "img_url": "img/WEASELSCARD.jpg" },
+                { "name": "NEMCARD", "supply": 2000, "date": "2016-08-02", "img_url": "img/NEMCARD.jpg" },
+                { "name": "SORCERESSCD", "supply": 1200, "date": "2016-08-10", "img_url": "img/SORCERESSCD.jpg" },
+                { "name": "FWCFCFIERYCC", "supply": 1000, "date": "2016-08-12", "img_url": "img/FWCFCFIERYCC.jpg" },
+                { "name": "FWCFCUMRATTC", "supply": 1000, "date": "2016-08-13", "img_url": "img/FWCFCUMRATTC.jpg" },
+                { "name": "FWSDLICEDRAC", "supply": 1000, "date": "2016-08-13", "img_url": "img/FWSDLICEDRAC.jpg" },
+                { "name": "FWSDLFIETHSC", "supply": 1000, "date": "2016-08-13", "img_url": "img/FWSDLFIETHSC.jpg" },
+                { "name": "FWSDLTHEMONC", "supply": 1000, "date": "2016-08-13", "img_url": "img/FWSDLTHEMONC.jpg" },
+                { "name": "TREZORCD", "supply": 600, "date": "2016-08-24", "img_url": "img/TREZORCD.jpg" },
+                { "name": "HARPIESCARD", "supply": 800, "date": "2016-08-24", "img_url": "img/HARPIESCARD.jpg" },
+                { "name": "SLACKCARD", "supply": 1200, "date": "2016-09-14", "img_url": "img/SLACKCARD.jpg" },
+                { "name": "WAVESCARD", "supply": 800, "date": "2016-09-21", "img_url": "img/WAVESCARD.jpg" },
+                { "name": "PEACOCKCARD", "supply": 2000, "date": "2016-09-26", "img_url": "img/PEACOCKCARD.jpg" },
+                { "name": "BITCOINCOMCD", "supply": 600, "date": "2016-10-03", "img_url": "img/BITCOINCOMCD.jpg" },
+                { "name": "BARDCARD", "supply": 800, "date": "2016-10-19", "img_url": "img/BARDCARD.jpg" },
+                { "name": "BITCOINISTCD", "supply": 1200, "date": "2016-10-25", "img_url": "img/BITCOINISTCD.jpg" },
+                { "name": "SCARECROWCD", "supply": 2000, "date": "2016-10-31", "img_url": "img/SCARECROWCD.jpg" },
+                { "name": "GOLEMCARD", "supply": 800, "date": "2016-11-02", "img_url": "img/GOLEMCARD.jpg" },
+                { "name": "WATERSCARD", "supply": 600, "date": "2016-11-08", "img_url": "img/WATERSCARD.jpg" },
+                { "name": "HUNTERCARD", "supply": 1200, "date": "2016-11-15", "img_url": "img/HUNTERCARD.jpg" },
+                { "name": "MAMAGRUN", "supply": 400, "date": "2016-11-18", "img_url": "img/MAMAGRUN.jpg" },
+                { "name": "KAYLAGRUN", "supply": 400, "date": "2016-11-18", "img_url": "img/KAYLAGRUN.jpg" },
+                { "name": "GASTADGRUN", "supply": 400, "date": "2016-11-18", "img_url": "img/GASTADGRUN.jpg" },
+                { "name": "TINYGRUN", "supply": 400, "date": "2016-11-18", "img_url": "img/TINYGRUN.jpg" },
+                { "name": "TROYGRUN", "supply": 400, "date": "2016-11-18", "img_url": "img/TROYGRUN.jpg" },
+                { "name": "EMERALDETHER", "supply": 2000, "date": "2016-11-21", "img_url": "img/EMERALDETHER.jpg" },
+                { "name": "BITCOINMAGCD", "supply": 600, "date": "2016-11-28", "img_url": "img/BITCOINMAGCD.jpg" },
+                { "name": "GENOFLIGHT", "supply": 1000, "date": "2016-12-01", "img_url": "img/GENOFLIGHT.jpg" },
+                { "name": "VICTORIACARD", "supply": 800, "date": "2016-12-05", "img_url": "img/VICTORIACARD.jpg" },
+                { "name": "PIXIECARD", "supply": 600, "date": "2016-12-05", "img_url": "img/PIXIECARD.jpg" },
+                { "name": "WAARTHCARD", "supply": 1200, "date": "2016-12-05", "img_url": "img/WAARTHCARD.jpg" },
+                { "name": "CROWCARD", "supply": 2000, "date": "2016-12-05", "img_url": "img/CROWCARD.jpg" },
+                { "name": "KINGREINDEER", "supply": 400, "date": "2016-12-15", "img_url": "img/KINGREINDEER.jpg" },
+                { "name": "LAMUSECARD", "supply": 600, "date": "2016-12-15", "img_url": "img/LAMUSECARD.jpg" },
+                { "name": "COINPORTALCD", "supply": 2000, "date": "2017-01-03", "img_url": "img/COINPORTALCD.jpg" },
+                { "name": "TATIANACARD", "supply": 1200, "date": "2017-01-04", "img_url": "img/TATIANACARD.jpg" },
+                { "name": "KARMACARD", "supply": 800, "date": "2017-01-16", "img_url": "img/KARMACARD.jpg" },
+                { "name": "BTCCFORGECD", "supply": 2000, "date": "2017-01-23", "img_url": "img/BTCCFORGECD.jpg" },
+                { "name": "ROOSTERYEAR", "supply": 600, "date": "2017-01-26", "img_url": "img/ROOSTERYEAR.jpg" },
+                { "name": "BTCCCOINCARD", "supply": 1200, "date": "2017-01-26", "img_url": "img/BTCCCOINCARD.jpg" },
+                { "name": "MARKETACARD", "supply": 500, "date": "2017-01-30", "img_url": "img/MARKETACARD.jpg" },
+                { "name": "MIGHTYSTORK", "supply": 800, "date": "2017-02-06", "img_url": "img/MIGHTYSTORK.jpg" },
+                { "name": "WATERANGEL", "supply": 400, "date": "2017-02-10", "img_url": "img/WATERANGEL.jpg" },
+                { "name": "FIREANGEL", "supply": 400, "date": "2017-02-10", "img_url": "img/FIREANGEL.jpg" },
+                { "name": "JEWELDRAGONS", "supply": 300, "date": "2017-02-14", "img_url": "img/JEWELDRAGONS.jpg" },
+                { "name": "SAPPHIREELF", "supply": 600, "date": "2017-02-17", "img_url": "img/SAPPHIREELF.jpg" },
+                { "name": "CRAZYLOLA", "supply": 2000, "date": "2017-02-17", "img_url": "img/CRAZYLOLA.jpg" },
+                { "name": "WOODMONSTER", "supply": 1200, "date": "2017-03-13", "img_url": "img/WOODMONSTER.jpg" },
+                { "name": "QUIRINCARD", "supply": 400, "date": "2017-03-17", "img_url": "img/QUIRINCARD.jpg" },
+                { "name": "HERBODCARD", "supply": 400, "date": "2017-03-17", "img_url": "img/HERBODCARD.jpg" },
+                { "name": "RIDANCARD", "supply": 400, "date": "2017-03-17", "img_url": "img/RIDANCARD.jpg" },
+                { "name": "COINDESKCARD", "supply": 2000, "date": "2017-03-23", "img_url": "img/COINDESKCARD.jpg" },
+                { "name": "CRYSTALIBUR", "supply": 200, "date": "2017-03-23", "img_url": "img/CRYSTALIBUR.jpg" },
+                { "name": "FORKCARD", "supply": 600, "date": "2017-04-03", "img_url": "img/FORKCARD.jpg" },
+                { "name": "PRINCEOFICE", "supply": 800, "date": "2017-04-07", "img_url": "img/PRINCEOFICE.jpg" },
+                { "name": "DARKSTATUE", "supply": 1200, "date": "2017-04-07", "img_url": "img/DARKSTATUE.jpg" },
+                { "name": "MOTHERBIRD", "supply": 2000, "date": "2017-04-26", "img_url": "img/MOTHERBIRD.jpg" },
+                { "name": "SOGLAUNCHCD", "supply": 1000, "date": "2017-04-26", "img_url": "img/SOGLAUNCHCD.jpg" },
+                { "name": "STAGWARRIOR", "supply": 600, "date": "2017-04-26", "img_url": "img/STAGWARRIOR.jpg" },
+                { "name": "GIANTCARD", "supply": 800, "date": "2017-04-27", "img_url": "img/GIANTCARD.jpg" },
+                { "name": "SYLVANELF", "supply": 1200, "date": "2017-04-27", "img_url": "img/SYLVANELF.jpg" },
+                { "name": "THEMESSENGER", "supply": 800, "date": "2017-04-27", "img_url": "img/THEMESSENGER.jpg" },
+                { "name": "BADWOLF", "supply": 400, "date": "2017-04-27", "img_url": "img/BADWOLF.jpg" },
+                { "name": "SIACARD", "supply": 400, "date": "2017-04-27", "img_url": "img/SIACARD.jpg" },
+                { "name": "SORCERERAKAM", "supply": 400, "date": "2017-04-27", "img_url": "img/SORCERERAKAM.jpg" },
+                { "name": "PURPLEDRAGON", "supply": 1000, "date": "2017-04-27", "img_url": "img/PURPLEDRAGON.jpg" },
+                { "name": "FACTOMCD", "supply": 2000, "date": "2017-04-27", "img_url": "img/FACTOMCD.jpg" },
+                { "name": "MUSHROOMSIMP", "supply": 2000, "date": "2017-04-27", "img_url": "img/MUSHROOMSIMP.jpg" },
+                { "name": "BTCMEETUPCD", "supply": 600, "date": "2017-06-12", "img_url": "img/BTCMEETUPCD.jpg" },
+                { "name": "BCINVESTCARD", "supply": 600, "date": "2017-06-26", "img_url": "img/BCINVESTCARD.jpg" },
+                { "name": "ROYALGRIFFIN", "supply": 600, "date": "2017-08-09", "img_url": "img/ROYALGRIFFIN.jpg" },
+                { "name": "JAYACARD", "supply": 600, "date": "2017-08-09", "img_url": "img/JAYACARD.jpg" },
+                { "name": "WEANARAASSAS", "supply": 300, "date": "2017-09-01", "img_url": "img/WEANARAASSAS.jpg" },
+                { "name": "VISCULASCARA", "supply": 300, "date": "2017-09-04", "img_url": "img/VISCULASCARA.jpg" },
+                { "name": "ROYALDEER", "supply": 300, "date": "2017-09-04", "img_url": "img/ROYALDEER.jpg" },
+                { "name": "VISCULADRAGO", "supply": 300, "date": "2017-09-19", "img_url": "img/VISCULADRAGO.jpg" },
+                { "name": "ELFMONSTERKI", "supply": 300, "date": "2017-09-20", "img_url": "img/ELFMONSTERKI.jpg" },
+                { "name": "GRAVIGASSCAR", "supply": 300, "date": "2017-09-25", "img_url": "img/GRAVIGASSCAR.jpg" },
+                { "name": "TROLLDEPTHS", "supply": 300, "date": "2017-09-25", "img_url": "img/TROLLDEPTHS.jpg" },
+                { "name": "PROSSESSORFL", "supply": 300, "date": "2017-09-26", "img_url": "img/PROSSESSORFL.jpg" },
+                { "name": "CARNIATHCELE", "supply": 300, "date": "2017-09-26", "img_url": "img/CARNIATHCELE.jpg" },
+                { "name": "DEVASTATINGM", "supply": 300, "date": "2017-09-26", "img_url": "img/DEVASTATINGM.jpg" },
+                { "name": "OUTRAGIOUSWA", "supply": 300, "date": "2017-09-27", "img_url": "img/OUTRAGIOUSWA.jpg" },
+                { "name": "VISCULATICK", "supply": 300, "date": "2017-09-27", "img_url": "img/VISCULATICK.jpg" },
+                { "name": "SCORPIGAS", "supply": 300, "date": "2017-09-27", "img_url": "img/SCORPIGAS.jpg" },
+                { "name": "VIGILANTWATE", "supply": 300, "date": "2017-09-27", "img_url": "img/VIGILANTWATE.jpg" },
+                { "name": "GRIFFINMASTE", "supply": 300, "date": "2017-09-27", "img_url": "img/GRIFFINMASTE.jpg" },
+                { "name": "TRIDENTQUEEN", "supply": 300, "date": "2017-10-02", "img_url": "img/TRIDENTQUEEN.jpg" },
+                { "name": "DARKAODH", "supply": 300, "date": "2017-10-02", "img_url": "img/DARKAODH.jpg" },
+                { "name": "HEAVENLYSHEP", "supply": 300, "date": "2017-10-04", "img_url": "img/HEAVENLYSHEP.jpg" },
+                { "name": "CHARGEELITE", "supply": 300, "date": "2017-10-04", "img_url": "img/CHARGEELITE.jpg" },
+                { "name": "SLASHINGCRIR", "supply": 300, "date": "2017-10-04", "img_url": "img/SLASHINGCRIR.jpg" },
+                { "name": "HUNGRYAMPHIB", "supply": 300, "date": "2017-10-05", "img_url": "img/HUNGRYAMPHIB.jpg" },
+                { "name": "PIRANHAMANIP", "supply": 300, "date": "2017-10-05", "img_url": "img/PIRANHAMANIP.jpg" },
+                { "name": "VISCULAMANTI", "supply": 300, "date": "2017-10-06", "img_url": "img/VISCULAMANTI.jpg" },
+                { "name": "CRYSTALREFIN", "supply": 300, "date": "2017-10-09", "img_url": "img/CRYSTALREFIN.jpg" },
+                { "name": "PRINCEOFWINT", "supply": 300, "date": "2017-10-09", "img_url": "img/PRINCEOFWINT.jpg" },
+                { "name": "GRIDCOINCARD", "supply": 800, "date": "2017-10-10", "img_url": "img/GRIDCOINCARD.jpg" },
+                { "name": "ELFSAGE", "supply": 300, "date": "2017-10-11", "img_url": "img/ELFSAGE.jpg" },
+                { "name": "VISCULAFROZE", "supply": 300, "date": "2017-10-11", "img_url": "img/VISCULAFROZE.jpg" },
+                { "name": "DOGENHANCER", "supply": 300, "date": "2017-10-11", "img_url": "img/DOGENHANCER.jpg" },
+                { "name": "FAIRYTALESHA", "supply": 300, "date": "2017-10-14", "img_url": "img/FAIRYTALESHA.jpg" },
+                { "name": "PRINCESSSUMM", "supply": 300, "date": "2017-10-14", "img_url": "img/PRINCESSSUMM.jpg" },
+                { "name": "WIZARDTROLL", "supply": 300, "date": "2017-10-14", "img_url": "img/WIZARDTROLL.jpg" },
+                { "name": "WISETHRAL", "supply": 300, "date": "2017-10-14", "img_url": "img/WISETHRAL.jpg" },
+                { "name": "PRINCEAUTUMN", "supply": 300, "date": "2017-10-14", "img_url": "img/PRINCEAUTUMN.jpg" },
+                { "name": "CENTAURARCHE", "supply": 300, "date": "2017-10-14", "img_url": "img/CENTAURARCHE.jpg" },
+                { "name": "PRINCESSSPRI", "supply": 300, "date": "2017-10-14", "img_url": "img/PRINCESSSPRI.jpg" },
+                { "name": "WATERELFADMI", "supply": 300, "date": "2017-10-18", "img_url": "img/WATERELFADMI.jpg" },
+                { "name": "INFECTEDSORM", "supply": 300, "date": "2017-10-18", "img_url": "img/INFECTEDSORM.jpg" },
+                { "name": "WATERSPEARFI", "supply": 300, "date": "2017-10-18", "img_url": "img/WATERSPEARFI.jpg" },
+                { "name": "QUEENSHEALER", "supply": 300, "date": "2017-10-18", "img_url": "img/QUEENSHEALER.jpg" },
+                { "name": "VIRBULOSELIT", "supply": 300, "date": "2017-10-18", "img_url": "img/VIRBULOSELIT.jpg" },
+                { "name": "ICEUNICORN", "supply": 300, "date": "2017-10-18", "img_url": "img/ICEUNICORN.jpg" },
+                { "name": "PAPIIGAS", "supply": 300, "date": "2017-10-18", "img_url": "img/PAPIIGAS.jpg" },
+                { "name": "ERAOL", "supply": 300, "date": "2017-10-18", "img_url": "img/ERAOL.jpg" },
+                { "name": "YELLOWSHAMAN", "supply": 300, "date": "2017-10-18", "img_url": "img/YELLOWSHAMAN.jpg" },
+                { "name": "HARBINGERDEA", "supply": 300, "date": "2017-10-18", "img_url": "img/HARBINGERDEA.jpg" },
+                { "name": "DIVINEKNIGHT", "supply": 300, "date": "2017-10-18", "img_url": "img/DIVINEKNIGHT.jpg" },
+                { "name": "VISCULABEETL", "supply": 300, "date": "2017-10-18", "img_url": "img/VISCULABEETL.jpg" },
+                { "name": "ICEGOLEM", "supply": 300, "date": "2017-10-18", "img_url": "img/ICEGOLEM.jpg" },
+                { "name": "ENCHANTEDSHI", "supply": 300, "date": "2017-10-18", "img_url": "img/ENCHANTEDSHI.jpg" },
+                { "name": "DARKCHALCOSI", "supply": 300, "date": "2017-10-18", "img_url": "img/DARKCHALCOSI.jpg" },
+                { "name": "CARNIATHCREA", "supply": 300, "date": "2017-10-18", "img_url": "img/CARNIATHCREA.jpg" },
+                { "name": "OVERARMEDDWA", "supply": 300, "date": "2017-10-18", "img_url": "img/OVERARMEDDWA.jpg" },
+                { "name": "POWERSCATTER", "supply": 300, "date": "2017-10-18", "img_url": "img/POWERSCATTER.jpg" },
+                { "name": "WARRIORLUMIN", "supply": 300, "date": "2017-10-18", "img_url": "img/WARRIORLUMIN.jpg" },
+                { "name": "FROZENCOLOSS", "supply": 300, "date": "2017-10-18", "img_url": "img/FROZENCOLOSS.jpg" },
+                { "name": "LEVIOTHAN", "supply": 300, "date": "2017-10-18", "img_url": "img/LEVIOTHAN.jpg" },
+                { "name": "VISCULAFIREF", "supply": 300, "date": "2017-10-18", "img_url": "img/VISCULAFIREF.jpg" },
+                { "name": "VISCULACENTI", "supply": 300, "date": "2017-10-18", "img_url": "img/VISCULACENTI.jpg" },
+                { "name": "WARRIOROBSCU", "supply": 300, "date": "2017-10-18", "img_url": "img/WARRIOROBSCU.jpg" },
+                { "name": "ITLANKINGGAR", "supply": 300, "date": "2017-10-18", "img_url": "img/ITLANKINGGAR.jpg" },
+                { "name": "REINFORCEDOC", "supply": 300, "date": "2017-10-18", "img_url": "img/REINFORCEDOC.jpg" },
+                { "name": "DEALERFLAMES", "supply": 300, "date": "2017-10-18", "img_url": "img/DEALERFLAMES.jpg" },
+                { "name": "DEVASTATINGT", "supply": 300, "date": "2017-10-18", "img_url": "img/DEVASTATINGT.jpg" },
+                { "name": "VISCULALADYB", "supply": 400, "date": "2017-10-18", "img_url": "img/VISCULALADYB.jpg" },
+                { "name": "QUEENSVIRBUL", "supply": 300, "date": "2017-10-19", "img_url": "img/QUEENSVIRBUL.jpg" },
+                { "name": "REINFORCEMEN", "supply": 300, "date": "2017-10-19", "img_url": "img/REINFORCEMEN.jpg" },
+                { "name": "GUARDIANSOUR", "supply": 300, "date": "2017-10-19", "img_url": "img/GUARDIANSOUR.jpg" },
+                { "name": "CORRUPTEDTRO", "supply": 300, "date": "2017-10-19", "img_url": "img/CORRUPTEDTRO.jpg" },
+                { "name": "MONSTERDEPTH", "supply": 300, "date": "2017-10-19", "img_url": "img/MONSTERDEPTH.jpg" },
+                { "name": "ITLANEXPERTD", "supply": 300, "date": "2017-10-19", "img_url": "img/ITLANEXPERTD.jpg" },
+                { "name": "CARDMERCHANT", "supply": 300, "date": "2017-10-19", "img_url": "img/CARDMERCHANT.jpg" },
+                { "name": "TRANSCENDEN", "supply": 300, "date": "2017-10-24", "img_url": "img/TRANSCENDEN.jpg" },
+                { "name": "DISTRICTOXCD", "supply": 800, "date": "2017-10-24", "img_url": "img/DISTRICTOXCD.jpg" },
+                { "name": "TROLLBERSERK", "supply": 300, "date": "2017-10-25", "img_url": "img/TROLLBERSERK.jpg" },
+                { "name": "SOGHALLOWEEN", "supply": 500, "date": "2017-10-29", "img_url": "img/SOGHALLOWEEN.jpg" },
+                { "name": "DRACOMANCER", "supply": 800, "date": "2017-11-07", "img_url": "img/DRACOMANCER.jpg" },
+                { "name": "SELENACARD", "supply": 700, "date": "2017-11-16", "img_url": "img/SELENACARD.jpg" },
+                { "name": "MAYACARD", "supply": 600, "date": "2017-11-16", "img_url": "img/MAYACARD.jpg" },
+                { "name": "LYSANDERCARD", "supply": 500, "date": "2017-11-16", "img_url": "img/LYSANDERCARD.jpg" },
+                { "name": "DIMITRICARD", "supply": 400, "date": "2017-11-16", "img_url": "img/DIMITRICARD.jpg" },
+                { "name": "CAMILACARD", "supply": 300, "date": "2017-11-16", "img_url": "img/CAMILACARD.jpg" },
+                { "name": "BALABASTER", "supply": 500, "date": "2017-12-01", "img_url": "img/BALABASTER.jpg" },
+                { "name": "LALABASTER", "supply": 400, "date": "2017-12-01", "img_url": "img/LALABASTER.jpg" },
+                { "name": "EALABASTER", "supply": 500, "date": "2017-12-01", "img_url": "img/EALABASTER.jpg" },
+                { "name": "CALABASTER", "supply": 400, "date": "2017-12-01", "img_url": "img/CALABASTER.jpg" },
+                { "name": "BADROMANCE", "supply": 400, "date": "2018-02-12", "img_url": "img/BADROMANCE.jpg" },
+                { "name": "SPRINGSDAWN", "supply": 400, "date": "2018-03-14", "img_url": "img/SPRINGSDAWN.jpg" },
+                { "name": "LRIKTHEFIGHT", "supply": 300, "date": "2018-08-27", "img_url": "img/LRIKTHEFIGHT.jpg" },
+                { "name": "ETHERMAGE", "supply": 1981, "date": "2018-10-10", "img_url": "img/ETHERMAGE.jpg" },
+                { "name": "ORCSASSAULT", "supply": 300, "date": "2018-11-13", "img_url": "img/ORCSASSAULT.jpg" },
+                { "name": "GUMMYYUMMY", "supply": 500, "date": "2018-12-03", "img_url": "img/GUMMYYUMMY.jpg" },
+                { "name": "ICEMINOTAUR", "supply": 1000, "date": "2018-12-04", "img_url": "img/ICEMINOTAUR.jpg" },
+                { "name": "POLYMATHCARD", "supply": 1000, "date": "2018-12-05", "img_url": "img/POLYMATHCARD.jpg" },
+                { "name": "SOGWHTDRAGON", "supply": 600, "date": "2019-06-20", "img_url": "img/SOGWHTDRAGON.jpg" },
+                { "name": "SOGWEREWOLF", "supply": 400, "date": "2019-06-24", "img_url": "img/SOGWEREWOLF.jpg" },
+                { "name": "SOGJANUS", "supply": 700, "date": "2019-07-18", "img_url": "img/SOGJANUS.jpg" },
+                { "name": "SOGBCYBOX", "supply": 1000, "date": "2019-07-18", "img_url": "img/SOGBCYBOX.jpg" },
+                { "name": "FIERCERABBIT", "supply": 800, "date": "2019-07-18", "img_url": "img/FIERCERABBIT.jpg" },
+                { "name": "SOGWILDHORSE", "supply": 600, "date": "2019-07-18", "img_url": "img/SOGWILDHORSE.jpg" },
+                { "name": "LIGHTWARRIOR", "supply": 800, "date": "2019-09-04", "img_url": "img/LIGHTWARRIOR.jpg" },
+                { "name": "CROWWARRIOR", "supply": 700, "date": "2019-09-04", "img_url": "img/CROWWARRIOR.jpg" },
+                { "name": "THEWATCHER", "supply": 600, "date": "2019-09-04", "img_url": "img/THEWATCHER.jpg" },
+                { "name": "BEARSPIRIT", "supply": 500, "date": "2019-09-04", "img_url": "img/BEARSPIRIT.jpg" },
+                { "name": "SOGHARELORD", "supply": 400, "date": "2019-11-12", "img_url": "img/SOGHARELORD.jpg" },
+                { "name": "BROTHERFOX", "supply": 800, "date": "2019-11-12", "img_url": "img/BROTHERFOX.jpg" },
+                { "name": "WTRSUCCUBUS", "supply": 600, "date": "2019-11-12", "img_url": "img/WTRSUCCUBUS.jpg" },
+                { "name": "KINGHURIENK", "supply": 1000, "date": "2019-11-12", "img_url": "img/KINGHURIENK.jpg" },
+                { "name": "WISEWIZARD", "supply": 400, "date": "2019-11-12", "img_url": "img/WISEWIZARD.jpg" },
+                { "name": "MYSTRSMAID", "supply": 1200, "date": "2019-11-12", "img_url": "img/MYSTRSMAID.jpg" },
+                { "name": "DAICARD", "supply": 400, "date": "2020-09-24" , "img_url": "img/DAICARD.jpg" },
+            ]
+            const showMissingBalances = true
+
+            // http://www.julianhaight.com/btcvalid.js
+            !function(){function r(r,t,e){var a;return a=Math.ceil(t/bpe)+1,a=e>a?e:a,buff=new Array(a),n(buff,r),buff}function n(r,t){var n,e;for(e=t,n=0;n<r.length;n++)r[n]=e&mask,e>>=bpe}function e(r,t){return t>>>r|t<<32-r}function a(r,t,n){return r&t^~r&n}function o(r,t,n){return r&t^r&n^t&n}function u(r){return e(2,r)^e(13,r)^e(22,r)}function f(r){return e(6,r)^e(11,r)^e(25,r)}function s(r){return e(7,r)^e(18,r)^r>>>3}function i(r){return e(17,r)^e(19,r)^r>>>10}function c(r,t){return r[15&t]+=i(r[t+14&15])+r[t+9&15]+s(r[t+1&15])}function _(r,t){var n=(65535&r)+(65535&t),e=(r>>16)+(t>>16)+(n>>16);return e<<16|65535&n}function h(){A=new Array(8),y=new Array(2),C=new Array(64),y[0]=y[1]=0,A[0]=1779033703,A[1]=3144134277,A[2]=1013904242,A[3]=2773480762,A[4]=1359893119,A[5]=2600822924,A[6]=528734635,A[7]=1541459225}function v(){var r,t,n,e,s,i,h,v,g,b,d=new Array(16);r=A[0],t=A[1],n=A[2],e=A[3],s=A[4],i=A[5],h=A[6],v=A[7];for(var m=0;16>m;m++)d[m]=C[(m<<2)+3]|C[(m<<2)+2]<<8|C[(m<<2)+1]<<16|C[m<<2]<<24;for(var p=0;64>p;p++)g=v+f(s)+a(s,i,h)+k[p],g+=16>p?d[p]:c(d,p),b=u(r)+o(r,t,n),v=h,h=i,i=s,s=_(e,g),e=n,n=t,t=r,r=_(g,b);A[0]+=r,A[1]+=t,A[2]+=n,A[3]+=e,A[4]+=s,A[5]+=i,A[6]+=h,A[7]+=v}function g(r,t){var n,e,a=0;e=y[0]>>3&63;var o=63&t;for((y[0]+=t<<3)<t<<3&&y[1]++,y[1]+=t>>29,n=0;t>n+63;n+=64){for(var u=e;64>u;u++)C[u]=r.charCodeAt(a++);v(),e=0}for(var u=0;o>u;u++)C[u]=r.charCodeAt(a++)}function b(){var r=y[0]>>3&63;if(C[r++]=128,56>=r)for(var t=r;56>t;t++)C[t]=0;else{for(var t=r;64>t;t++)C[t]=0;v();for(var t=0;56>t;t++)C[t]=0}C[56]=y[1]>>>24&255,C[57]=y[1]>>>16&255,C[58]=y[1]>>>8&255,C[59]=255&y[1],C[60]=y[0]>>>24&255,C[61]=y[0]>>>16&255,C[62]=y[0]>>>8&255,C[63]=255&y[0],v()}function d(){for(var r=new String,t=0;8>t;t++)for(var n=28;n>=0;n-=4)r+=x.charAt(A[t]>>>n&15);return r}function m(r){return h(),g(r,r.length),b(),d()}function p(r){if(0===r.length)return[];var t,n,e=[0];for(t=0;t<r.length;t++){var a=r[t];if(!(a in S))throw new Error("Non-base58 character");for(n=0;n<e.length;n++)e[n]*=D;e[0]+=S[a];var o=0;for(n=0;n<e.length;++n)e[n]+=o,o=e[n]>>8,e[n]&=255;for(;o;)e.push(255&o),o>>=8}for(t=0;"1"===r[t]&&t<r.length-1;t++)e.push(0);for(e=e.reverse(),output="",t=0;t<e.length;t++)output+=String.fromCharCode(e[t]);return output}function l(r){try{var t=p(r);if(25!=t.length)return!1;var n=t.substr(t.length-4),e=t.substr(0,t.length-4),a=w(m(w(m(e)))).substr(0,4);return n!=a?!1:!0}catch(o){return!1}}function w(r){for(var t="",n=0;n<r.length;n+=2)t+=String.fromCharCode(parseInt(r.substr(n,2),16));return t}for(bpe=0,mask=0,radix=mask+1,digitsStr="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_=!@#$%^&*()[]{}|;:,.<>/?`~ \\'\"+-",bpe=0;1<<bpe+1>1<<bpe;bpe++);bpe>>=1,mask=(1<<bpe)-1,radix=mask+1,one=r(1,1,1),t=new Array(0),ss=t,s0=t,s1=t,s2=t,s3=t,s4=t,s5=t,s6=t,s7=t,T=t,sa=t,mr_x1=t,mr_r=t,mr_a=t,eg_v=t,eg_u=t,eg_A=t,eg_B=t,eg_C=t,eg_D=t,md_q1=t,md_q2=t,md_q3=t,md_r=t,md_r1=t,md_r2=t,md_tt=t,primes=t,pows=t,s_i=t,s_i2=t,s_R=t,s_rm=t,s_q=t,s_n1=t,s_a=t,s_r2=t,s_n=t,s_b=t,s_d=t,s_x1=t,s_x2=t,s_aa=t,rpprb=t;for(var A,y,C,k=new Array(1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635748,2870763221,3624381080,310598401,607225278,1426881987,1925078388,2162078206,2614888103,3248222580,3835390401,4022224774,264347078,604807628,770255983,1249150122,1555081692,1996064986,2554220882,2821834349,2952996808,3210313671,3336571891,3584528711,113926993,338241895,666307205,773529912,1294757372,1396182291,1695183700,1986661051,2177026350,2456956037,2730485921,2820302411,3259730800,3345764771,3516065817,3600352804,4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298),x="0123456789abcdef",q="123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",S={},B=0;B<q.length;B++)S[q.charAt(B)]=B;var D=58;window.checkAddress=l}();
+
+            const form = document.querySelector('form')
+            const result = document.querySelector('#result')
+            const result_missing = document.querySelector('#result_missing')
+
+            const formatValue = (value, decimals = 2, style = 'decimal') =>
+                new Intl.NumberFormat('en-US', {
+                    style,
+                    currency: 'USD',
+                    minimumFractionDigits: decimals,
+                    maximumFractionDigits: decimals,
+                }).format(value)
+                            
+            const get_address = (address, page = 1) => fetch(`${API_URL}address/${address}`).then((response) => response.json())
+
+            const get_balances = (address, page = 1) => fetch(`${API_URL}balances/${address}/${page}`).then((response) => response.json())
+
+            const get_all_balances = async (address) => {
+                let balances = [], sog_balances = [], missing_balances = []
+
+                const address_info = await get_address(address)
+                const asset_count = address_info.assets.held
+                const max = Math.ceil(asset_count / 500)
+
+                for(let i=1; i<=max; i++) {
+                    const chunk = await get_balances(address, i)
+
+                    balances = balances.concat(chunk.data)
+                }
+
+                balances.forEach(balance => {
+                    const { asset, quantity } = balance
+                    const hit = cards.filter(c => c.name === asset)[0]
+                    
+                    if(hit) {
+                        sog_balances.push(balance)
+                    }
+                })
+
+                cards.forEach(card => {
+                    const { name } = card
+                    const hit = balances.filter(b => b.asset === name)[0]
+
+                    if(!hit) {
+                        missing_balances.push(card)
+                    }
+                })
+
+                return [sog_balances, missing_balances]
+            }
+
+            const get_table_html = sog_balances => {
+                let html = 
+                    `<table id="balances" class="table mb-5">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th style="text-align: right; padding-right: 20px;" data-sort-method="none" scope="col">Date issued</th>
+                                <th style="text-align: right; padding-right: 50px;" scope="col">Quantity</th>
+                                <th style="text-align: right; padding-right: 50px;" scope="col">Percentage of supply</th>
+                                <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
+                                <th scope="col">Links</th>
+                            </tr>
+                        </thead>
+                    <tbody>`
+                
+                sog_balances.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).forEach(sogbal => {
+                    const { asset, quantity } = sogbal
+                    const card = cards.filter(c => c.name === asset)[0]
+                    const { supply, date, img_url } = card
+
+                    html += 
+                    `<tr>
+                        <td data-sort="${asset}">
+                            <span data-bs-toggle="popover" data-bs-title="${asset} image" data-bs-content="${img_url}">🏞</span>
+                            ${asset}
+                        </td>
+                        <td style="text-align: right; padding-right: 20px;">
+                            ${date}
+                        </td>
+                        <td style="text-align: right; padding-right: 50px;" data-sort="${quantity.toString().padStart(20, '0')}">
+                            ${parseFloat(quantity) < 1 ? quantity : formatValue(quantity, 0)}
+                        </td>
+                        <td style="text-align: right; padding-right: 50px;" data-sort="${parseFloat(quantity / supply * 1000000000000).toFixed(0).padStart(20, '0')}">
+                            ${parseFloat(quantity / supply * 100).toFixed(2)} %
+                        </td>
+                        <td style="text-align: right; padding-right: 50px;" data-sort="${parseInt(supply * 100000000, 10).toString().padStart(20, '0')}">
+                            ${formatValue(supply, 0)}
+                        </td>
+                        <td>
+                            <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
+                        </td>
+                    </tr>`
+                })
+                
+                html +=
+                    `</tbody>
+                    </table>`
+                
+                return html                
+            }
+
+            const compare_balances = async (address, compareAddress) => {
+                result.innerHTML = 'Loading balances for both addresses..'
+
+                const [source_balances] = await get_all_balances(address)
+                const [destination_balances] = await get_all_balances(compareAddress)
+                
+                let missing_balances = []
+
+                destination_balances.forEach(balance => {
+                    const { asset, quantity } = balance
+                    const hit = source_balances.filter(c => c.asset === asset)[0]
+
+                    if(!hit) {
+                        missing_balances.push(balance)
+                    }
+                })
+
+                result.innerHTML = `<h4>Address ${compareAddress.substr(0, 6)}.. has ${missing_balances.length} Spells of Genesis cards that address ${address.substr(0, 6)}.. doesn't have yet</h4>`
+                result.innerHTML += get_table_html(missing_balances)
+                
+                new Tablesort(document.getElementById('balances'))
+
+                document.querySelectorAll('[data-bs-toggle="popover"]')
+                    .forEach(popover => {
+                        let html = `<img src="${popover.getAttribute('data-bs-content')}" />`
+
+                        new bootstrap.Popover(popover, {
+                            animation: false,
+                            content: html,
+                            html: true,
+                            placement: 'bottom',
+                            trigger: 'hover'
+                        })
+                    })                
+            }
+
+            const check_balances = async (address) => {
+                result.innerHTML = 'Loading balances..'
+
+                const [sog_balances, missing_balances] = await get_all_balances(address)
+
+                result.innerHTML = `<h4>Address ${address} contains ${sog_balances.length}/253 (${parseFloat(sog_balances.length / 253 * 100).toFixed(2)} %) Spells of Genesis cards!</h4>`
+                result.innerHTML += get_table_html(sog_balances)
+
+                new Tablesort(document.getElementById('balances'))
+
+                document.querySelectorAll('[data-bs-toggle="popover"]')
+                    .forEach(popover => {
+                        let html = `<img src="${popover.getAttribute('data-bs-content')}" />`
+
+                        new bootstrap.Popover(popover, {
+                            animation: false,
+                            content: html,
+                            html: true,
+                            placement: 'bottom',
+                            trigger: 'hover'
+                        })
+                    })
+
+                if(showMissingBalances && missing_balances.length) {
+                    result_missing.innerHTML += `<h4>Address ${address} is missing ${missing_balances.length}/253 (${parseFloat(missing_balances.length / 253 * 100).toFixed(2)} %) Spells of Genesis cards</h4>`
+                
+                    let html = 
+                        `<table id="missing_balances" class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th style="text-align: right; padding-right: 20px;" scope="col">Series</th>
+                                    <th style="text-align: right; padding-right: 20px;" scope="col">Card #</th>
+                                    <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
+                                    <th scope="col">Links</th>
+                                </tr>
+                            </thead>
+                        <tbody>`
+                    
+                    missing_balances.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).forEach(bal => {
+                        const { name: asset, supply, date, img_url } = bal
+
+                        html += 
+                        `<tr>
+                            <td data-sort="${asset}">
+                                <span data-bs-toggle="popover" data-bs-title="${asset} image" data-bs-content="${img_url}">🏞</span>
+                                ${asset}
+                            </td>
+                            <td style="text-align: right; padding-right: 20px;" data-sort="${(date.toString().padStart(2, '0')).padStart(4, '0')}">
+                                ${date}
+                            </td>
+                            
+                            <td style="text-align: right; padding-right: 50px;" data-sort="${parseInt(supply * 100000000, 10).toString().padStart(20, '0')}">
+                                ${formatValue(supply, 0)}
+                            </td>
+                            <td>
+                                <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
+                            </td>
+                        </tr>`
+                    })
+                    
+                    html +=
+                        `</tbody>
+                        </table>`
+                    
+                    result_missing.innerHTML += html
+                    result_missing.style.display = 'block'
+
+                    new Tablesort(document.getElementById('missing_balances'))
+                }
+            }
+
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+            })
+
+            function validateAddress(address) {
+                if(checkAddress(address)) {
+                    if(params?.address !== address) {
+                        window.history.pushState('', '', `?address=${address}`)
+                    } else {
+                        console.log(`${params.address} and ${address} are the same, no need to update the query param`)
+                    }
+
+                    check_balances(address)
+                } else if(address !== '') {
+                    result.innerHTML = `<div class="alert alert-warning" role="alert">
+                        This isn't a valid BTC/XCP address
+                    </div>`
+                }
+            }
+
+            function validateCompareAddress(address, compareAddress) {
+                if(checkAddress(address) && checkAddress(compareAddress)) {
+                    if(params?.address !== address || params?.compare !== compareAddress) {
+                        window.history.pushState('', '', `?address=${address}&compare=${compareAddress}`)
+                    }
+
+                    compare_balances(address, compareAddress)
+                } else if(address !== '' && compareAddress !== '') {
+                    result.innerHTML = `<div class="alert alert-warning" role="alert">
+                        One of these isn't a valid BTC/XCP address
+                    </div>`
+                }
+            }
+
+            if(params?.address) {
+                document.querySelector('#btcAddress').value = params.address
+
+                if(params?.compare) {
+                    document.querySelector('#compareAddress').value = params.compare
+    
+                    validateCompareAddress(params.address, params.compare)
+                } else {
+                    validateAddress(params.address)
+                }
+            }
+            
+            form.querySelector('.btn-balances').addEventListener('click', event => {
+                result.innerHTML = ''
+                result_missing.innerHTML = ''
+
+                const address = document.querySelector('#btcAddress').value
+
+                event.preventDefault()
+
+                validateAddress(address)
+            })
+
+            form.querySelector('.btn-compare').addEventListener('click', event => {
+                result.innerHTML = ''
+                result_missing.innerHTML = ''
+
+                const address = document.querySelector('#btcAddress').value
+                const compareAddress = document.querySelector('#compareAddress').value
+
+                event.preventDefault()
+
+                validateCompareAddress(address, compareAddress)
+            })
+        </script>        
+    </body>
+</html>
