@@ -1836,5 +1836,11 @@
     "supply": 141,
     "date": "2023-10-18",
     "img_url": "img/SOGMOONCATS.jpg"
+  },
+  {
+    "name": "SOGCURIO",
+    "supply": 140,
+    "date": "2023-10-18",
+    "img_url": "img/SOGCURIO.jpg"
   }
 ]
