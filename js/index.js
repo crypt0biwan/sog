@@ -70,7 +70,7 @@ const get_table_html = sog_balances => {
                 <th style="text-align: right; padding-right: 50px;" scope="col">Quantity</th>
                 <th style="text-align: right; padding-right: 50px;" scope="col">Percentage of supply</th>
                 <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
-                <th scope="col">Links</th>
+                <th class="text-end" scope="col">Links</th>
             </tr>
         </thead>
         <tbody>`
@@ -183,7 +183,7 @@ const check_balances = async (address) => {
                         <th scope="col">Name</th>
                         <th style="text-align: right; padding-right: 20px;" scope="col">Date issued</th>
                         <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
-                        <th scope="col">Links</th>
+                        <th class="text-end" scope="col">Links</th>
                     </tr>
                 </thead>
                 <tbody>`
