@@ -13,15 +13,31 @@
         .popover-body img { width: auto; max-width: 100%; }
         .links a { margin: 0 3px; }
         .links a img { width: 16px; }
+        .links a.emblem-markets { background-color: #000; padding: 0 2px 3px 3px; }
+
+        .bd-green-100 {
+            background-color: #d1e7dd;
+        }
+        .bd-red-100 {
+            background-color: #f8d7da;
+        }
+
+        .table {
+            --bs-table-color: var(--bs-body-color);
+            --bs-table-bg: transparent;
+            --bs-table-border-color: #777;
+            --bs-table-accent-bg: transparent;
+            --bs-table-striped-color: var(--bs-body-color);
+        }
     </style>    
 
     <script src="js/bech32-js.js"></script>
 </head>
 <body>
-    <div class="container mb-3">
-        <h3>Spells of Genesis</h3>
+    <div class="container-fluid bg-black text-white mb-0 px-3">
+        <h3 class="pt-2">Spells of Genesis</h3>
         
-        <p>
+        <p class="pb-3 mb-0">
             <i>
                 When you put in your address below it queries which Spells of Genesis cards are in that addres and which cards are missing.<br />
                 The table headers are clickable so you can easily sort<br />
@@ -30,8 +46,8 @@
         </p>
     </div>
     
-    <form>
-        <div class="container mb-5">
+    <form class=" bg-black text-white">
+        <div class="container-fluid pb-5 px-3">
             <div class="row">
                 <div class="col-md-5">
                     <div class="mb-2">
@@ -65,15 +81,21 @@
         </div>
     </form>
     
-    <div class="container mb-5">
+    <div class="container-fluid">
         <div id="header"></div>
+    </div>
 
+    <div class="container-fluid">
         <div id="table_form" class="d-none form-check">
             <input type="checkbox" class="form-check-input" id="hideSingleQuantities">
             <label class="form-check-label" for="hideSingleQuantities">Hide single quantities</label>
         </div>
 
+    </div>
+    <div id="result-container" class="container-fluid pt-3">
         <div id="result"></div>
+    </div>
+    <div class="container-fluid bd-red-100">
         <div id="result_missing" style="display: none;"></div>
     </div>
     

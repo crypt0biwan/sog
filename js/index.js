@@ -9,6 +9,7 @@ const showMissingBalances = true
 const form = document.querySelector('form')
 const header = document.querySelector('#header')
 const tableForm = document.querySelector('#table_form')
+const result_container = document.querySelector('#result-container')
 const result = document.querySelector('#result')
 const result_missing = document.querySelector('#result_missing')
 
@@ -60,18 +61,19 @@ const get_all_balances = async (address) => {
 
 const get_table_html = sog_balances => {
     let html = 
-    `<table id="balances" class="table mb-5">
-    <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th style="text-align: right; padding-right: 20px;" scope="col">Date issued</th>
-            <th style="text-align: right; padding-right: 50px;" scope="col">Quantity</th>
-            <th style="text-align: right; padding-right: 50px;" scope="col">Percentage of supply</th>
-            <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
-            <th scope="col">Links</th>
-        </tr>
-    </thead>
-    <tbody>`
+    `<div class="table-responsive">
+        <table id="balances" class="table table-striped mb-0">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th style="text-align: right; padding-right: 20px;" scope="col">Date issued</th>
+                <th style="text-align: right; padding-right: 50px;" scope="col">Quantity</th>
+                <th style="text-align: right; padding-right: 50px;" scope="col">Percentage of supply</th>
+                <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
+                <th scope="col">Links</th>
+            </tr>
+        </thead>
+        <tbody>`
     
     sog_balances.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).forEach(sogbal => {
         const { asset, quantity } = sogbal
@@ -80,32 +82,34 @@ const get_table_html = sog_balances => {
         
         html += 
         `<tr data-quantity="${quantity}">
-            <td data-sort="${asset}">
+            <td class="text-nowrap" data-sort="${asset}">
                 <span data-bs-toggle="popover" data-bs-title="${asset} image" data-bs-content="${img_url}">🏞</span>
                 ${asset}
             </td>
-            <td style="text-align: right; padding-right: 20px;" data-sort="${date.toString().replace('-','')}">
+            <td class="text-nowrap" style="text-align: right; padding-right: 20px;" data-sort="${date.toString().replace('-','')}">
                 ${date}
             </td>
-            <td style="text-align: right; padding-right: 50px;" data-sort="${quantity}">
+            <td class="text-nowrap" style="text-align: right; padding-right: 50px;" data-sort="${quantity}">
                 ${parseFloat(quantity) < 1 ? quantity : formatValue(quantity, 0)}
             </td>
-            <td style="text-align: right; padding-right: 50px;" data-sort="${quantity / supply}">
+            <td class="text-nowrap" style="text-align: right; padding-right: 50px;" data-sort="${quantity / supply}">
                 ${parseFloat(quantity / supply * 100).toFixed(2)} %
             </td>
-            <td style="text-align: right; padding-right: 50px;" data-sort="${supply}">
+            <td class="text-nowrap" style="text-align: right; padding-right: 50px;" data-sort="${supply}">
                 ${formatValue(supply, 0)}
             </td>
-            <td class="links">
+            <td class="links text-nowrap text-end">
                 <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
                 ${emblem_vault ? `<a href="${emblem_vault}" target="_blank"><img src="logos/emblem.png" /></a>` : ''}
+                ${emblem_vault ? `<a href="https://emblem.markets/ethereum/asset/${emblem_vault.replace('https://opensea.io/assets/ethereum/', '').replace('/', ':')}" target="_blank" class="emblem-markets"><img src="logos/emblem-markets.svg" /></a>` : ''}
             </td>
         </tr>`
     })
     
     html +=
         `</tbody>
-        </table>`
+        </table>
+    </div>`
 
     return html                
 }
@@ -142,7 +146,8 @@ const compare_balances = async (address, compareAddress) => {
         }
     })
 
-    header.innerHTML = `<h4>Address ${compareAddress.substr(0, 6)}.. has ${missing_balances.length} Spells of Genesis cards that address ${address.substr(0, 6)}.. doesn't have yet</h4>`
+    result_container.classList.remove('bd-green-100')
+    header.innerHTML = `<h4 class="pt-3">Address ${compareAddress.substr(0, 6)}.. has ${missing_balances.length} Spells of Genesis cards that address ${address.substr(0, 6)}.. doesn't have yet</h4>`
     
     if(missing_balances.length) {
         tableForm.classList.remove('d-none')
@@ -159,6 +164,7 @@ const check_balances = async (address) => {
 
     const [sog_balances, missing_balances] = await get_all_balances(address)
 
+    result_container.classList.add('bd-green-100')
     result.innerHTML = `<h4>Address ${address} contains ${sog_balances.length}/${cards.length} (${parseFloat(sog_balances.length / cards.length * 100).toFixed(2)} %) Spells of Genesis cards!</h4>`
     result.innerHTML += get_table_html(sog_balances)
 
@@ -167,46 +173,49 @@ const check_balances = async (address) => {
     enable_popover()
 
     if(showMissingBalances && missing_balances.length) {
-        result_missing.innerHTML += `<h4>Address ${address} is missing ${missing_balances.length}/${cards.length} (${parseFloat(missing_balances.length / cards.length * 100).toFixed(2)} %) Spells of Genesis cards</h4>`
+        result_missing.innerHTML += `<h4 class="p-2 pt-4">Address ${address} is missing ${missing_balances.length}/${cards.length} (${parseFloat(missing_balances.length / cards.length * 100).toFixed(2)} %) Spells of Genesis cards</h4>`
         
         let html = 
-        `<table id="missing_balances" class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th style="text-align: right; padding-right: 20px;" scope="col">Date issued</th>
-                    <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
-                    <th scope="col">Links</th>
-                </tr>
-            </thead>
-            <tbody>`
-            
-            missing_balances.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).forEach(bal => {
-                const { name: asset, supply, date, img_url, emblem_vault } = bal
+        `<div class="table-responsive">
+                <table id="missing_balances" class="table table-striped mb-0">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th style="text-align: right; padding-right: 20px;" scope="col">Date issued</th>
+                        <th style="text-align: right; padding-right: 50px;" scope="col">Active Supply</th>
+                        <th scope="col">Links</th>
+                    </tr>
+                </thead>
+                <tbody>`
                 
-                html += 
-                `<tr>
-                    <td data-sort="${asset}">
-                        <span data-bs-toggle="popover" data-bs-title="${asset} image" data-bs-content="${img_url}">🏞</span>
-                        ${asset}
-                    </td>
-                    <td style="text-align: right; padding-right: 20px;" data-sort="${date.toString().replace('-','')}">
-                        ${date}
-                    </td>
+                missing_balances.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).forEach(bal => {
+                    const { name: asset, supply, date, img_url, emblem_vault } = bal
                     
-                    <td style="text-align: right; padding-right: 50px;" data-sort="${supply}">
-                        ${formatValue(supply, 0)}
-                    </td>
-                    <td class="links">
-                        <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
-                        ${emblem_vault ? `<a href="${emblem_vault}" target="_blank"><img src="logos/emblem.png" /></a>` : ''}
-                    </td>
-                </tr>`
-            })
-            
-            html +=
-            `</tbody>
-        </table>`
+                    html += 
+                    `<tr>
+                        <td class="text-nowrap" data-sort="${asset}">
+                            <span data-bs-toggle="popover" data-bs-title="${asset} image" data-bs-content="${img_url}">🏞</span>
+                            ${asset}
+                        </td>
+                        <td class="text-nowrap" style="text-align: right; padding-right: 20px;" data-sort="${date.toString().replace('-','')}">
+                            ${date}
+                        </td>
+                        
+                        <td class="text-nowrap" style="text-align: right; padding-right: 50px;" data-sort="${supply}">
+                            ${formatValue(supply, 0)}
+                        </td>
+                        <td class="links text-nowrap text-end">
+                            <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
+                            ${emblem_vault ? `<a href="${emblem_vault}" target="_blank"><img src="logos/emblem.png" /></a>` : ''}
+                            ${emblem_vault ? `<a href="https://emblem.markets/ethereum/asset/${emblem_vault.replace('https://opensea.io/assets/ethereum/', '').replace('/', ':')}" target="_blank" class="emblem-markets"><img src="logos/emblem-markets.svg" /></a>` : ''}
+                            </td>
+                    </tr>`
+                })
+                
+                html +=
+                `</tbody>
+            </table>
+        </div>`
         
         result_missing.innerHTML += html
         result_missing.style.display = 'block'
