@@ -1842,5 +1842,17 @@
     "supply": 140,
     "date": "2023-10-18",
     "img_url": "img/SOGCURIO.jpg"
+  },
+  {
+    "name": "SOGHALVING",
+    "supply": 78,
+    "date": "2024-03-23",
+    "img_url": "img/SOGHALVING.jpg"
+  },
+  {
+    "name": "SOGEVERTREE",
+    "supply": 59,
+    "date": "2024-05-12",
+    "img_url": "img/SOGEVERTREE.jpg"
   }
 ]
