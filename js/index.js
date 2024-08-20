@@ -100,6 +100,7 @@ const get_table_html = sog_balances => {
             </td>
             <td class="links text-nowrap text-end">
                 <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
+                <a href="https://hnft.wtf/detail/${asset}" target="_blank"><img src="logos/hnft.png" /></a>
                 ${emblem_vault ? `<a href="${emblem_vault}" target="_blank"><img src="logos/emblem.png" /></a>` : ''}
                 ${emblem_vault ? `<a href="https://emblem.markets/ethereum/asset/${emblem_vault.replace('https://opensea.io/assets/ethereum/', '').replace('/', ':')}" target="_blank" class="emblem-markets"><img src="logos/emblem-markets.svg" /></a>` : ''}
             </td>
@@ -206,6 +207,7 @@ const check_balances = async (address) => {
                         </td>
                         <td class="links text-nowrap text-end">
                             <a href="https://xchain.io/asset/${asset}" target="_blank"><img src="logos/xchain.png" /></a>
+                            <a href="https://hnft.wtf/detail/${asset}" target="_blank"><img src="logos/hnft.png" /></a>
                             ${emblem_vault ? `<a href="${emblem_vault}" target="_blank"><img src="logos/emblem.png" /></a>` : ''}
                             ${emblem_vault ? `<a href="https://emblem.markets/ethereum/asset/${emblem_vault.replace('https://opensea.io/assets/ethereum/', '').replace('/', ':')}" target="_blank" class="emblem-markets"><img src="logos/emblem-markets.svg" /></a>` : ''}
                             </td>
