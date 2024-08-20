@@ -29,7 +29,7 @@
   },
   {
     "name": "XCPCARD",
-    "supply": 995,
+    "supply": 689,
     "date": "2015-06-24",
     "img_url": "img/XCPCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/8583019547808907563983068869302590190752095120274498579759558743177649273469"
@@ -393,7 +393,7 @@
   },
   {
     "name": "SADICARD",
-    "supply": 600,
+    "supply": 245,
     "date": "2016-05-09",
     "img_url": "img/SADICARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/84013829289969515066876694786929388874966612591896613213657892323449457899068"
@@ -476,7 +476,7 @@
   },
   {
     "name": "KRAKENCARD",
-    "supply": 799,
+    "supply": 308,
     "date": "2016-07-19",
     "img_url": "img/KRAKENCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/39751748346151116052592768248468566969661156803787898343137885111281167452703"
