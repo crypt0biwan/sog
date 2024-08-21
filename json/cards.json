@@ -1,42 +1,42 @@
 [
   {
     "name": "FDCARD",
-    "supply": 297.99999419,
+    "supply": 299.99999419,
     "date": "2015-03-11",
     "img_url": "img/FDCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/49319940536954261620677345474255943187303066520632166453630992958924196581838"
   },
   {
     "name": "SJCXCARD",
-    "supply": 555,
+    "supply": 557,
     "date": "2015-06-01",
     "img_url": "img/SJCXCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/20645975678572228347794239336227837394372857004864463766074740477061090095376"
   },
   {
     "name": "GEMZCARD",
-    "supply": 413.95354578,
+    "supply": 414.95354578,
     "date": "2015-06-02",
     "img_url": "img/GEMZCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/103589751417833768611664556334660564715998064328916507934970170178142964600536"
   },
   {
     "name": "CLEFCARD",
-    "supply": 334,
+    "supply": 338,
     "date": "2015-06-24",
     "img_url": "img/CLEFCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/26675745848120065581005920851768664266254199953496957490216988518310393077534"
   },
   {
     "name": "XCPCARD",
-    "supply": 689,
+    "supply": 686,
     "date": "2015-06-24",
     "img_url": "img/XCPCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/8583019547808907563983068869302590190752095120274498579759558743177649273469"
   },
   {
     "name": "ETHEREUMCARD",
-    "supply": 236,
+    "supply": 239,
     "date": "2015-06-24",
     "img_url": "img/ETHEREUMCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/89978031720404983463746992871836384175183577875197430772637711035617364649213"
@@ -50,21 +50,21 @@
   },
   {
     "name": "SATOSHICARD",
-    "supply": 195.71999994,
+    "supply": 199.99999994,
     "date": "2015-06-24",
     "img_url": "img/SATOSHICARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/58363754322459138900649816955089588643662704881838820590654390061972206308159"
   },
   {
     "name": "RIPPLECARD",
-    "supply": 488,
+    "supply": 491,
     "date": "2015-07-05",
     "img_url": "img/RIPPLECARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/7498044596284025698246847108288225876159962601785696055932981023847227645739"
   },
   {
     "name": "GENESISCARD",
-    "supply": 549,
+    "supply": 557,
     "date": "2015-07-05",
     "img_url": "img/GENESISCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/91292898610475391086040093262569985822706518807724813812871005851996803855214"
@@ -78,98 +78,98 @@
   },
   {
     "name": "CNPCARD",
-    "supply": 994,
+    "supply": 997,
     "date": "2015-07-17",
     "img_url": "img/CNPCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/108748128744972651017404104731726222428530224051371247493236545996937329291241"
   },
   {
     "name": "SHUMAICARD",
-    "supply": 993,
+    "supply": 997,
     "date": "2015-07-17",
     "img_url": "img/SHUMAICARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/56025220463954109956941556351339727420797374050042857571644021375216483658022"
   },
   {
     "name": "BEARWHALECD",
-    "supply": 417,
+    "supply": 427,
     "date": "2015-07-24",
     "img_url": "img/BEARWHALECD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/3623347447849245749614100521699669859649150256717300540677041832814212922697"
   },
   {
     "name": "BLOCKSIZECD",
-    "supply": 298,
+    "supply": 300,
     "date": "2015-08-27",
     "img_url": "img/BLOCKSIZECD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/15931983756288858821515347707155894628107566951866071439985911804372065194789"
   },
   {
     "name": "ETHXCPCARD",
-    "supply": 363,
+    "supply": 365,
     "date": "2015-09-20",
     "img_url": "img/ETHXCPCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/97308003207595735550843464562671783181171227771961488238562810093621395853806"
   },
   {
     "name": "LTBCARD",
-    "supply": 996,
+    "supply": 1000,
     "date": "2015-10-06",
     "img_url": "img/LTBCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/33933080782891137098849836453134170249882266006906664795131865607115130871193"
   },
   {
     "name": "XAJIBESAAR",
-    "supply": 499,
+    "supply": 500,
     "date": "2015-10-12",
     "img_url": "img/XAJIBESAAR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/6346235333294121498704702038850255771908879344248694793956167929966517274408"
   },
   {
     "name": "XAJIJASPAAR",
-    "supply": 999,
+    "supply": 1000,
     "date": "2015-10-12",
     "img_url": "img/XAJIJASPAAR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/91814990125770337186651763194456574844564828007912907897448663207408284908300"
   },
   {
     "name": "XAJIBASILAAR",
-    "supply": 1998,
+    "supply": 2000,
     "date": "2015-10-12",
     "img_url": "img/XAJIBASILAAR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/28875709230387894454648043276610602011033227603230168708255502147834111203135"
   },
   {
     "name": "ZAIFCARD",
-    "supply": 997,
+    "supply": 1000,
     "date": "2015-10-13",
     "img_url": "img/ZAIFCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/838758148130157514554352746488459125585842529666014829757822114744299257122"
   },
   {
     "name": "BAZAARCARD",
-    "supply": 996,
+    "supply": 1000,
     "date": "2015-10-21",
     "img_url": "img/BAZAARCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/34324761469297305684511111870502449691299268693200105453225067712156006712176"
   },
   {
     "name": "CARDAUGUR",
-    "supply": 1198,
+    "supply": 1200,
     "date": "2015-10-23",
     "img_url": "img/CARDAUGUR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/36580593239573281112144814118511929842934886595060227502015668311964746412524"
   },
   {
     "name": "WHEREBCYCARD",
-    "supply": 697,
+    "supply": 700,
     "date": "2015-10-23",
     "img_url": "img/WHEREBCYCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/99220116750275514782975819632671537397705620791257679825572258355713933682971"
   },
   {
     "name": "CARDAIRBITZ",
-    "supply": 1199,
+    "supply": 1200,
     "date": "2015-10-23",
     "img_url": "img/CARDAIRBITZ.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/32975890332339499079137219870914103086498052703308751647886918287678272252728"
@@ -183,7 +183,7 @@
   },
   {
     "name": "GOXCARD",
-    "supply": 375,
+    "supply": 379,
     "date": "2015-10-28",
     "img_url": "img/GOXCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/38721005748130154570683755619606598751492981859133612760806617229098569383786"
@@ -197,21 +197,21 @@
   },
   {
     "name": "MINERCARD",
-    "supply": 1197,
+    "supply": 1200,
     "date": "2015-11-04",
     "img_url": "img/MINERCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/90014840800655997406144300972795061572662258485603327592979254423079223219476"
   },
   {
     "name": "BCYDRAGON",
-    "supply": 298,
+    "supply": 300,
     "date": "2015-11-16",
     "img_url": "img/BCYDRAGON.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/69574106066940992275615843363709415549172246714605410084385658934653171025093"
   },
   {
     "name": "BTCDRAGONCD",
-    "supply": 793,
+    "supply": 800,
     "date": "2015-11-16",
     "img_url": "img/BTCDRAGONCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/5984739692598525764957466583537020284184120646579588463208189546204026662304"
@@ -225,49 +225,49 @@
   },
   {
     "name": "XAJIBOSS",
-    "supply": 295,
+    "supply": 300,
     "date": "2015-11-26",
     "img_url": "img/XAJIBOSS.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/83133831719286814281428649247201441910500077127198430960726808467266539358429"
   },
   {
     "name": "TALISMANCARD",
-    "supply": 399,
+    "supply": 400,
     "date": "2015-12-02",
     "img_url": "img/TALISMANCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/60677717383812561780719613341928254683987047837748854489662497340562196640503"
   },
   {
     "name": "DOGECOINCARD",
-    "supply": 1191,
+    "supply": 1200,
     "date": "2015-12-07",
     "img_url": "img/DOGECOINCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/37700639930047550374702191888787001692937523306543367061650661225562943651749"
   },
   {
     "name": "EMERALDCARD",
-    "supply": 794,
+    "supply": 800,
     "date": "2015-12-10",
     "img_url": "img/EMERALDCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/105261079144873788955543580573769348435284451912026788714069341366017179719040"
   },
   {
     "name": "CARDAMBER",
-    "supply": 799,
+    "supply": 800,
     "date": "2015-12-10",
     "img_url": "img/CARDAMBER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/65439334534006535968790469266568331389316617660855439432683886480813499084234"
   },
   {
     "name": "WAGATECARD",
-    "supply": 798,
+    "supply": 800,
     "date": "2015-12-10",
     "img_url": "img/WAGATECARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/105706417762982793678685922935096984982505448412179790283605537143980999393303"
   },
   {
     "name": "RUBYCARD",
-    "supply": 799,
+    "supply": 800,
     "date": "2015-12-10",
     "img_url": "img/RUBYCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/2076526713248828539624543750650237109807673074126686105415186839662045087839"
@@ -288,28 +288,28 @@
   },
   {
     "name": "BLOCKTRAILCD",
-    "supply": 1197,
+    "supply": 1200,
     "date": "2015-12-10",
     "img_url": "img/BLOCKTRAILCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/38856996191649477118276697086847498065088013255407916157531826614006354853814"
   },
   {
     "name": "SARUTOBICARD",
-    "supply": 1593.99999996,
+    "supply": 1599.99999996,
     "date": "2015-12-19",
     "img_url": "img/SARUTOBICARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/59926052507130232473881327106157325920845811912545886058234440486960581416640"
   },
   {
     "name": "GOBLINCARD",
-    "supply": 1199,
+    "supply": 1200,
     "date": "2016-01-27",
     "img_url": "img/GOBLINCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/92017690045981905619007364256635145306649458073087874609184487069708842153573"
   },
   {
     "name": "SATOSHILITE",
-    "supply": 492,
+    "supply": 500,
     "date": "2016-02-03",
     "img_url": "img/SATOSHILITE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/88656452760813880008037309902382192443538469916338127772621722048125799070086"
@@ -323,7 +323,7 @@
   },
   {
     "name": "DARYENCARD",
-    "supply": 987,
+    "supply": 991,
     "date": "2016-02-18",
     "img_url": "img/DARYENCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/87768576521107276231110661258774453299736918375385153060685715535114254253883"
@@ -337,56 +337,56 @@
   },
   {
     "name": "COINOFLITECD",
-    "supply": 986,
+    "supply": 1000,
     "date": "2016-03-15",
     "img_url": "img/COINOFLITECD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/56914161817959319684502322118127439169831946640424852661737039121942250290751"
   },
   {
     "name": "SHIELDWALLCD",
-    "supply": 699,
+    "supply": 700,
     "date": "2016-03-15",
     "img_url": "img/SHIELDWALLCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/68592366908263880022980737084030657403103811722550399155099915591454050248595"
   },
   {
     "name": "MAIDSAFECD",
-    "supply": 697,
+    "supply": 700,
     "date": "2016-04-05",
     "img_url": "img/MAIDSAFECD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/63234165410381317487062189446049858296404187890264033173297929886383581914803"
   },
   {
     "name": "SHOPKEEPERCD",
-    "supply": 1989,
+    "supply": 2000,
     "date": "2016-04-13",
     "img_url": "img/SHOPKEEPERCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/17663207785523222297213944670677295284951046497143057209016359480605875617204"
   },
   {
     "name": "FOOTSOLDIER",
-    "supply": 2994,
+    "supply": 3000,
     "date": "2016-04-14",
     "img_url": "img/FOOTSOLDIER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/48929066626976719013992876196168828376533258044969474735585914926931899513976"
   },
   {
     "name": "BITSHARESCD",
-    "supply": 1189,
+    "supply": 1200,
     "date": "2016-04-18",
     "img_url": "img/BITSHARESCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/102628650655187281247534026531789107229362669755517297986563957156434141500617"
   },
   {
     "name": "CYCLOPSCARD",
-    "supply": 2379,
+    "supply": 2400,
     "date": "2016-04-26",
     "img_url": "img/CYCLOPSCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/81138238980988051776353257607820772520973600364446596658394480885019424596245"
   },
   {
     "name": "KEEPKEYCARD",
-    "supply": 797,
+    "supply": 800,
     "date": "2016-05-02",
     "img_url": "img/KEEPKEYCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/53477296156936152846770148173180508267346883083899661990261573484153001887720"
@@ -400,28 +400,28 @@
   },
   {
     "name": "CCMCARD",
-    "supply": 298,
+    "supply": 299,
     "date": "2016-05-13",
     "img_url": "img/CCMCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/101595735317583435575778772251132824314470430870588906272242339015806232550888"
   },
   {
     "name": "DASHCD",
-    "supply": 1197,
+    "supply": 1200,
     "date": "2016-05-13",
     "img_url": "img/DASHCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/114489307282893984441776880692487417907920011698353959661889287399815277477811"
   },
   {
     "name": "FLYINGBLAZE",
-    "supply": 998,
+    "supply": 1000,
     "date": "2016-05-23",
     "img_url": "img/FLYINGBLAZE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/108013642013834453882876447573028793654979734637886789103129507679259642792447"
   },
   {
     "name": "MAYALCARD",
-    "supply": 399,
+    "supply": 400,
     "date": "2016-05-30",
     "img_url": "img/MAYALCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/54650294314279189553701103991862183311223300014238533692127761402839829969860"
@@ -442,14 +442,14 @@
   },
   {
     "name": "GNOMECARD",
-    "supply": 1993,
+    "supply": 2000,
     "date": "2016-06-22",
     "img_url": "img/GNOMECARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/55268826789427808293137986802361799427208595835757693604163287933943160159023"
   },
   {
     "name": "WATERSCOURT",
-    "supply": 3489,
+    "supply": 3500,
     "date": "2016-06-23",
     "img_url": "img/WATERSCOURT.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/98451038726449187850586484234448935909468653389612911467501269817506835436671"
@@ -463,7 +463,7 @@
   },
   {
     "name": "VANBEXCARD",
-    "supply": 599,
+    "supply": 600,
     "date": "2016-07-05",
     "img_url": "img/VANBEXCARD.jpg"
   },
@@ -483,14 +483,14 @@
   },
   {
     "name": "WEASELSCARD",
-    "supply": 999,
+    "supply": 1000,
     "date": "2016-07-26",
     "img_url": "img/WEASELSCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/6756386806818936455539397437985387562798481225094485073870114107927898352439"
   },
   {
     "name": "NEMCARD",
-    "supply": 1994,
+    "supply": 2000,
     "date": "2016-08-02",
     "img_url": "img/NEMCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/4731649464336574697694349248371071112811787135580572424033495668908991261603"
@@ -504,14 +504,14 @@
   },
   {
     "name": "FWCFCFIERYCC",
-    "supply": 998,
+    "supply": 1000,
     "date": "2016-08-12",
     "img_url": "img/FWCFCFIERYCC.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/94802467893698706920327714990627656178498697875091518892443668848117472657086"
   },
   {
     "name": "FWCFCUMRATTC",
-    "supply": 998,
+    "supply": 1000,
     "date": "2016-08-13",
     "img_url": "img/FWCFCUMRATTC.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/6443922930695570606218165951002642213019120497090903917721554838511766240990"
@@ -539,7 +539,7 @@
   },
   {
     "name": "TREZORCD",
-    "supply": 586,
+    "supply": 600,
     "date": "2016-08-24",
     "img_url": "img/TREZORCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/62893376451213853307504124146682904557832333162229030688044199596966434580382"
@@ -553,56 +553,56 @@
   },
   {
     "name": "SLACKCARD",
-    "supply": 1194,
+    "supply": 1200,
     "date": "2016-09-14",
     "img_url": "img/SLACKCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/29057492251613624705099168185725967077176514906520722277604515102495790679906"
   },
   {
     "name": "WAVESCARD",
-    "supply": 794,
+    "supply": 800,
     "date": "2016-09-21",
     "img_url": "img/WAVESCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/89702087234808428414081969589128153325125451948774684367957478735595165808759"
   },
   {
     "name": "PEACOCKCARD",
-    "supply": 1995,
+    "supply": 2000,
     "date": "2016-09-26",
     "img_url": "img/PEACOCKCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/23285924607206023462226617360987910166375739530315282264080702233633216612265"
   },
   {
     "name": "BITCOINCOMCD",
-    "supply": 597,
+    "supply": 600,
     "date": "2016-10-03",
     "img_url": "img/BITCOINCOMCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/353928763507848766277695076190965118548393653622492696562243274641126475446"
   },
   {
     "name": "BARDCARD",
-    "supply": 798,
+    "supply": 800,
     "date": "2016-10-19",
     "img_url": "img/BARDCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/45184159991646551251418553064946949796510508870298447531260866929476218031639"
   },
   {
     "name": "BITCOINISTCD",
-    "supply": 1193,
+    "supply": 1200,
     "date": "2016-10-25",
     "img_url": "img/BITCOINISTCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/64170637924176368386497998722061537442169437442863842586665863407650861867015"
   },
   {
     "name": "SCARECROWCD",
-    "supply": 1995,
+    "supply": 2000,
     "date": "2016-10-31",
     "img_url": "img/SCARECROWCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/41123870434103019569843749309499892847596779737966437824949533484356418603933"
   },
   {
     "name": "GOLEMCARD",
-    "supply": 796,
+    "supply": 800,
     "date": "2016-11-02",
     "img_url": "img/GOLEMCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/33900645376297020084566603836378791238127465264294508289403911282109624406374"
@@ -616,28 +616,28 @@
   },
   {
     "name": "HUNTERCARD",
-    "supply": 1195,
+    "supply": 1200,
     "date": "2016-11-15",
     "img_url": "img/HUNTERCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/24863202547802928781987931796331813610423470709549043132788064066395532117306"
   },
   {
     "name": "MAMAGRUN",
-    "supply": 393,
+    "supply": 400,
     "date": "2016-11-18",
     "img_url": "img/MAMAGRUN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/65761679113422633578105505408701430017567910808807552146727263217625296401565"
   },
   {
     "name": "KAYLAGRUN",
-    "supply": 398,
+    "supply": 400,
     "date": "2016-11-18",
     "img_url": "img/KAYLAGRUN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/43229059485800168565087014746852324709590303645615299473620152503518698158999"
   },
   {
     "name": "GASTADGRUN",
-    "supply": 396,
+    "supply": 400,
     "date": "2016-11-18",
     "img_url": "img/GASTADGRUN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/14315635019138963419203192918131480328393528991719207826180141903572002209291"
@@ -651,14 +651,14 @@
   },
   {
     "name": "TROYGRUN",
-    "supply": 398,
+    "supply": 400,
     "date": "2016-11-18",
     "img_url": "img/TROYGRUN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/105398302167788441394020464467926488153222828178414648790924042106427204809710"
   },
   {
     "name": "EMERALDETHER",
-    "supply": 1994,
+    "supply": 2000,
     "date": "2016-11-21",
     "img_url": "img/EMERALDETHER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/59447412156212232858371913086420678693918643454266439292821366111693356712285"
@@ -691,14 +691,14 @@
   },
   {
     "name": "WAARTHCARD",
-    "supply": 1198,
+    "supply": 1200,
     "date": "2016-12-05",
     "img_url": "img/WAARTHCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/24246666834732769708400188813793365330246691044763666581273656790773547331438"
   },
   {
     "name": "CROWCARD",
-    "supply": 1977,
+    "supply": 2000,
     "date": "2016-12-05",
     "img_url": "img/CROWCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/35905058400606265766034471734417221714308471440528848143490968286000898348505"
@@ -712,21 +712,21 @@
   },
   {
     "name": "LAMUSECARD",
-    "supply": 599,
+    "supply": 600,
     "date": "2016-12-15",
     "img_url": "img/LAMUSECARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/107789186841293926374112676501370925942030748023301205317964559102206375809414"
   },
   {
     "name": "COINPORTALCD",
-    "supply": 1997,
+    "supply": 2000,
     "date": "2017-01-03",
     "img_url": "img/COINPORTALCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/46331890017493051686448594978437191412005596055891578093293765241292275153779"
   },
   {
     "name": "TATIANACARD",
-    "supply": 1199,
+    "supply": 1200,
     "date": "2017-01-04",
     "img_url": "img/TATIANACARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/32783371619537682292225933227813879068408377707207859173177995184051529255093"
@@ -740,7 +740,7 @@
   },
   {
     "name": "BTCCFORGECD",
-    "supply": 1999,
+    "supply": 2000,
     "date": "2017-01-23",
     "img_url": "img/BTCCFORGECD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/23575189312332934643575064725789415984350669239027931220530950877232599497137"
@@ -754,7 +754,7 @@
   },
   {
     "name": "BTCCCOINCARD",
-    "supply": 1193,
+    "supply": 1200,
     "date": "2017-01-26",
     "img_url": "img/BTCCCOINCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/77860979810679746514753462488666290122631803026822830808762902660505920508922"
@@ -774,21 +774,21 @@
   },
   {
     "name": "WATERANGEL",
-    "supply": 397,
+    "supply": 400,
     "date": "2017-02-10",
     "img_url": "img/WATERANGEL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/12797156908067845088369275421833184041822819350485671353616774829982005809940"
   },
   {
     "name": "FIREANGEL",
-    "supply": 387,
+    "supply": 389,
     "date": "2017-02-10",
     "img_url": "img/FIREANGEL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/65150485834468531157849626242524340119624497890029976477725601789310146325518"
   },
   {
     "name": "JEWELDRAGONS",
-    "supply": 599,
+    "supply": 600,
     "date": "2017-02-14",
     "img_url": "img/JEWELDRAGONS.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/51696312185323176717539523661454170288911473569859712928335731697454015925294"
@@ -801,7 +801,7 @@
   },
   {
     "name": "CRAZYLOLA",
-    "supply": 1998,
+    "supply": 2000,
     "date": "2017-02-17",
     "img_url": "img/CRAZYLOLA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/64718885105600679113088983648482386517284920792389181292594367014904372203836"
@@ -815,7 +815,7 @@
   },
   {
     "name": "QUIRINCARD",
-    "supply": 380,
+    "supply": 384,
     "date": "2017-03-17",
     "img_url": "img/QUIRINCARD.jpg"
   },
@@ -835,21 +835,21 @@
   },
   {
     "name": "COINDESKCARD",
-    "supply": 1997,
+    "supply": 2000,
     "date": "2017-03-23",
     "img_url": "img/COINDESKCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/7923787088749929802138066792066355946096383003495272245927780171313925491375"
   },
   {
     "name": "CRYSTALIBUR",
-    "supply": 199,
+    "supply": 200,
     "date": "2017-03-23",
     "img_url": "img/CRYSTALIBUR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/65590638469206349211057991966702733742785509044683845168493696027660818997532"
   },
   {
     "name": "FORKCARD",
-    "supply": 596,
+    "supply": 600,
     "date": "2017-04-03",
     "img_url": "img/FORKCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/105425334372558010394255790096187465517038458789566294611900416673391917278315"
@@ -862,7 +862,7 @@
   },
   {
     "name": "DARKSTATUE",
-    "supply": 1197,
+    "supply": 1200,
     "date": "2017-04-07",
     "img_url": "img/DARKSTATUE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/81184082689472332654056624082719942261534664362646100139401235732626762610041"
@@ -876,7 +876,7 @@
   },
   {
     "name": "SOGLAUNCHCD",
-    "supply": 995,
+    "supply": 1000,
     "date": "2017-04-26",
     "img_url": "img/SOGLAUNCHCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/66801303242359729823823504206852191056158412058800520756740751730200001078477"
@@ -890,14 +890,14 @@
   },
   {
     "name": "GIANTCARD",
-    "supply": 796,
+    "supply": 800,
     "date": "2017-04-27",
     "img_url": "img/GIANTCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/55840600228114779269297530508846339087813130542177523185039401895685015996969"
   },
   {
     "name": "SYLVANELF",
-    "supply": 1199,
+    "supply": 1200,
     "date": "2017-04-27",
     "img_url": "img/SYLVANELF.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/26854927775947800033237451608386874921202553627137888993017876260308718212156"
@@ -910,7 +910,7 @@
   },
   {
     "name": "BADWOLF",
-    "supply": 399,
+    "supply": 400,
     "date": "2017-04-27",
     "img_url": "img/BADWOLF.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/47983465918757194546394890913602814204858198282330303409477802719664744502180"
@@ -924,42 +924,42 @@
   },
   {
     "name": "SORCERERAKAM",
-    "supply": 399,
+    "supply": 400,
     "date": "2017-04-27",
     "img_url": "img/SORCERERAKAM.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/22685931562739588225125745712339690685288234352057880953477734286749509851699"
   },
   {
     "name": "PURPLEDRAGON",
-    "supply": 999,
+    "supply": 1000,
     "date": "2017-04-27",
     "img_url": "img/PURPLEDRAGON.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/108316441800312870069612392044512523104003263107532041622666674507624588788462"
   },
   {
     "name": "FACTOMCD",
-    "supply": 1995,
+    "supply": 2000,
     "date": "2017-04-27",
     "img_url": "img/FACTOMCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/100107908096151592171006133202677781281557516600431178913999460722710861852703"
   },
   {
     "name": "MUSHROOMSIMP",
-    "supply": 345,
+    "supply": 346,
     "date": "2017-04-27",
     "img_url": "img/MUSHROOMSIMP.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/61863475381533774455333658539371631922501979791545340610108601495279253665097"
   },
   {
     "name": "BTCMEETUPCD",
-    "supply": 599,
+    "supply": 600,
     "date": "2017-06-12",
     "img_url": "img/BTCMEETUPCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/61852418137797700241990438542633258917962317173745613697887110171576507417747"
   },
   {
     "name": "BCINVESTCARD",
-    "supply": 598,
+    "supply": 600,
     "date": "2017-06-26",
     "img_url": "img/BCINVESTCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/93025366424693933955500602657445981401246964999867244826506337854238546476173"
@@ -980,94 +980,94 @@
   },
   {
     "name": "WEANARAASSAS",
-    "supply": 296,
+    "supply": 300,
     "date": "2017-09-01",
     "img_url": "img/WEANARAASSAS.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/61581215380952530836272663490478602126655643452069504993326910506479613876209"
   },
   {
     "name": "VISCULASCARA",
-    "supply": 290,
+    "supply": 300,
     "date": "2017-09-04",
     "img_url": "img/VISCULASCARA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/68749880799422517515108965882999862005414742466076948406928317203773680482795"
   },
   {
     "name": "ROYALDEER",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-09-04",
     "img_url": "img/ROYALDEER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/46524347344674664136700538316430633818854824677507017770924369109509846367430"
   },
   {
     "name": "VISCULADRAGO",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-09-19",
     "img_url": "img/VISCULADRAGO.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/114016852964707532036367581150053577828538305109334525132799091753440199571965"
   },
   {
     "name": "ELFMONSTERKI",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-09-20",
     "img_url": "img/ELFMONSTERKI.jpg"
   },
   {
     "name": "GRAVIGASSCAR",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-09-25",
     "img_url": "img/GRAVIGASSCAR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/44058711296834111014839027210258559713260001654192675897112020437815611194924"
   },
   {
     "name": "TROLLDEPTHS",
-    "supply": 290,
+    "supply": 300,
     "date": "2017-09-25",
     "img_url": "img/TROLLDEPTHS.jpg"
   },
   {
     "name": "PROSSESSORFL",
-    "supply": 294,
+    "supply": 300,
     "date": "2017-09-26",
     "img_url": "img/PROSSESSORFL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/66834332163478410637517615754528366539635968178167922994726278308951997203350"
   },
   {
     "name": "CARNIATHCELE",
-    "supply": 498,
+    "supply": 499,
     "date": "2017-09-26",
     "img_url": "img/CARNIATHCELE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/30779999335015910372021780491890052503573730144113509153338093644991596343164"
   },
   {
     "name": "DEVASTATINGM",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-09-26",
     "img_url": "img/DEVASTATINGM.jpg"
   },
   {
     "name": "OUTRAGIOUSWA",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-09-27",
     "img_url": "img/OUTRAGIOUSWA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/1096354796663014462683944434812595977871189394091455107030219278530258060263"
   },
   {
     "name": "VISCULATICK",
-    "supply": 294,
+    "supply": 300,
     "date": "2017-09-27",
     "img_url": "img/VISCULATICK.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/93910218250666927194921885942336280845735359297310462295538127060669376056267"
   },
   {
     "name": "SCORPIGAS",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-09-27",
     "img_url": "img/SCORPIGAS.jpg"
   },
   {
     "name": "VIGILANTWATE",
-    "supply": 281,
+    "supply": 300,
     "date": "2017-09-27",
     "img_url": "img/VIGILANTWATE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/15454947524327306698059256630273042117125923455294424574670702615913426966977"
@@ -1080,68 +1080,68 @@
   },
   {
     "name": "TRIDENTQUEEN",
-    "supply": 591,
+    "supply": 600,
     "date": "2017-10-02",
     "img_url": "img/TRIDENTQUEEN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/10370917231747931156638276788923849688707998975038343839860118088911463532938"
   },
   {
     "name": "DARKAODH",
-    "supply": 590,
+    "supply": 600,
     "date": "2017-10-02",
     "img_url": "img/DARKAODH.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/65131141503915294501596869218029416868382899927639714939860126576065979852328"
   },
   {
     "name": "HEAVENLYSHEP",
-    "supply": 588,
+    "supply": 600,
     "date": "2017-10-04",
     "img_url": "img/HEAVENLYSHEP.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/86873539932716011239993527699750493287843917924499304241543827973833996840811"
   },
   {
     "name": "CHARGEELITE",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-10-04",
     "img_url": "img/CHARGEELITE.jpg"
   },
   {
     "name": "SLASHINGCRIR",
-    "supply": 592,
+    "supply": 600,
     "date": "2017-10-04",
     "img_url": "img/SLASHINGCRIR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/99666751650532146305029961523105610474786801192648763739097663090687887674772"
   },
   {
     "name": "HUNGRYAMPHIB",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-10-05",
     "img_url": "img/HUNGRYAMPHIB.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/51115085356207334805553972830405103395539399451488358228370378600515300655750"
   },
   {
     "name": "PIRANHAMANIP",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-10-05",
     "img_url": "img/PIRANHAMANIP.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/70808285257021734251098286057638572351876377481545705166220752018716833564144"
   },
   {
     "name": "VISCULAMANTI",
-    "supply": 294,
+    "supply": 300,
     "date": "2017-10-06",
     "img_url": "img/VISCULAMANTI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/92888646582743445762759413893425950581685805688417629391819295503509230073194"
   },
   {
     "name": "CRYSTALREFIN",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-10-09",
     "img_url": "img/CRYSTALREFIN.jpg"
   },
   {
     "name": "PRINCEOFWINT",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-10-09",
     "img_url": "img/PRINCEOFWINT.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/112669214998233656748116202506285823463959913820008206003572253890047575143331"
@@ -1161,342 +1161,342 @@
   },
   {
     "name": "VISCULAFROZE",
-    "supply": 288,
+    "supply": 300,
     "date": "2017-10-11",
     "img_url": "img/VISCULAFROZE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/87235406924067846647259267235556618612202977124246945203731760139418174926725"
   },
   {
     "name": "DOGENHANCER",
-    "supply": 299,
+    "supply": 300,
     "date": "2017-10-11",
     "img_url": "img/DOGENHANCER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/23819937567557677757315556160970714179634251101925020821691645534461553067230"
   },
   {
     "name": "FAIRYTALESHA",
-    "supply": 598,
+    "supply": 600,
     "date": "2017-10-14",
     "img_url": "img/FAIRYTALESHA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/70306708317770600115894486921520034467329227406567324302493479307980020360272"
   },
   {
     "name": "PRINCESSSUMM",
-    "supply": 296,
+    "supply": 300,
     "date": "2017-10-14",
     "img_url": "img/PRINCESSSUMM.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/106096866669791652044641778881578936061514867295814066179166685065151362904197"
   },
   {
     "name": "WIZARDTROLL",
-    "supply": 295,
+    "supply": 300,
     "date": "2017-10-14",
     "img_url": "img/WIZARDTROLL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/42884254625672542453496082938801928168612924560306479135437093294303582186118"
   },
   {
     "name": "WISETHRAL",
-    "supply": 297,
+    "supply": 300,
     "date": "2017-10-14",
     "img_url": "img/WISETHRAL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/3327209961252546750834206414779636269352940836123608757159037801692703038327"
   },
   {
     "name": "PRINCEAUTUMN",
-    "supply": 297,
+    "supply": 300,
     "date": "2017-10-14",
     "img_url": "img/PRINCEAUTUMN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/55495366422334858203413091887704981803484840350483914512063346921338607971221"
   },
   {
     "name": "CENTAURARCHE",
-    "supply": 297,
+    "supply": 300,
     "date": "2017-10-14",
     "img_url": "img/CENTAURARCHE.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/98202659460171301109080861600697300819472609716591034097340158717320667540551"
   },
   {
     "name": "PRINCESSSPRI",
-    "supply": 590,
+    "supply": 600,
     "date": "2017-10-14",
     "img_url": "img/PRINCESSSPRI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/23025334991424869165606387436923249259694459896393425241319852734166218378521"
   },
   {
     "name": "WATERELFADMI",
-    "supply": 295,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/WATERELFADMI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/71616935873562258276632170923842821774782210706754029158391359669828058481706"
   },
   {
     "name": "INFECTEDSORM",
-    "supply": 297,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/INFECTEDSORM.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/54623503716801390032545887012553279283681124860653912224261643569749471999167"
   },
   {
     "name": "WATERSPEARFI",
-    "supply": 297,
+    "supply": 299,
     "date": "2017-10-18",
     "img_url": "img/WATERSPEARFI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/78341317874430617100110195541459704594300780911069601651736860348306459345345"
   },
   {
     "name": "QUEENSHEALER",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/QUEENSHEALER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/95273969974229864982560396566636236816779149830849672137325879317983614853043"
   },
   {
     "name": "VIRBULOSELIT",
-    "supply": 597,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/VIRBULOSELIT.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/43379720076842037570522628458960993014255925862465677239147860618577230189191"
   },
   {
     "name": "ICEUNICORN",
-    "supply": 588,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/ICEUNICORN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/3827538205545423758291895328054455330254722115420459248211770276210909712967"
   },
   {
     "name": "PAPIIGAS",
-    "supply": 582,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/PAPIIGAS.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/59196460122381947706157809905552482541292809263819086710378825153968514457851"
   },
   {
     "name": "ERAOL",
-    "supply": 592,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/ERAOL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/52235062757180501176119807029188856058397637447915750161566205071443347414536"
   },
   {
     "name": "YELLOWSHAMAN",
-    "supply": 591,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/YELLOWSHAMAN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/39688430339623611587305958754081208665596573192399486412179730462206269967235"
   },
   {
     "name": "HARBINGERDEA",
-    "supply": 295,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/HARBINGERDEA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/78048135960517679835458691417572349795463326822677372663952902733379486115900"
   },
   {
     "name": "DIVINEKNIGHT",
-    "supply": 585,
+    "supply": 599,
     "date": "2017-10-18",
     "img_url": "img/DIVINEKNIGHT.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/77601319730492456011691345877425265019234548322275722120715296560943542056821"
   },
   {
     "name": "VISCULABEETL",
-    "supply": 592,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/VISCULABEETL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/30341745860522302025397029760303171490389716031412110260202431267168443228271"
   },
   {
     "name": "ICEGOLEM",
-    "supply": 296,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/ICEGOLEM.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/7498359999047732305303811365580148230047113101045377487492622665487769958010"
   },
   {
     "name": "ENCHANTEDSHI",
-    "supply": 592,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/ENCHANTEDSHI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/113155040690708001656875296899800502121876838191567352700431068007757876176989"
   },
   {
     "name": "DARKCHALCOSI",
-    "supply": 291,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/DARKCHALCOSI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/110650244346208704495144407380238149672947027156559264031382780301971435350146"
   },
   {
     "name": "CARNIATHCREA",
-    "supply": 591,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/CARNIATHCREA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/46585826089670360832463133121303021317426923127280974148162325710927261949721"
   },
   {
     "name": "OVERARMEDDWA",
-    "supply": 587,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/OVERARMEDDWA.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/55305696983850146613085240447216538888978051112058281973607622475754297039435"
   },
   {
     "name": "POWERSCATTER",
-    "supply": 297,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/POWERSCATTER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/58987345167221555740410187955098404447956219554414219755695745510033309470004"
   },
   {
     "name": "WARRIORLUMIN",
-    "supply": 590,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/WARRIORLUMIN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/92681927205303671900560494959497915982236505695360557815967000434625308620154"
   },
   {
     "name": "FROZENCOLOSS",
-    "supply": 289,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/FROZENCOLOSS.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/88775320772027648076555280636388541087327596326644172651566527897613419115441"
   },
   {
     "name": "LEVIOTHAN",
-    "supply": 287,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/LEVIOTHAN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/106453275656122677717070061879424141195820320247996842332828246230293529487862"
   },
   {
     "name": "VISCULAFIREF",
-    "supply": 294,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/VISCULAFIREF.jpg"
   },
   {
     "name": "VISCULACENTI",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-10-18",
     "img_url": "img/VISCULACENTI.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/81861781609845102514990281512214269134546325288670146024958426455709791206074"
   },
   {
     "name": "WARRIOROBSCU",
-    "supply": 591,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/WARRIOROBSCU.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/48854583140739252704737371838947754330709527131912503581518184997555140595426"
   },
   {
     "name": "ITLANKINGGAR",
-    "supply": 591,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/ITLANKINGGAR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/83993909146289038193938657102490652436637950456287038890804869112296026983042"
   },
   {
     "name": "REINFORCEDOC",
-    "supply": 593,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/REINFORCEDOC.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/37797457090781552221703782534450398498113074589473814280974002438953244284383"
   },
   {
     "name": "DEALERFLAMES",
-    "supply": 580,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/DEALERFLAMES.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/15391358730894632353896220247266597012092700825788221129166546005389416293298"
   },
   {
     "name": "DEVASTATINGT",
-    "supply": 588,
+    "supply": 600,
     "date": "2017-10-18",
     "img_url": "img/DEVASTATINGT.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/66559576281099945300460895139132443014145487874922108206064518195649968972106"
   },
   {
     "name": "VISCULALADYB",
-    "supply": 688,
+    "supply": 700,
     "date": "2017-10-18",
     "img_url": "img/VISCULALADYB.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/16670818430081222058306232994780237044930138737649966902617616784810325674284"
   },
   {
     "name": "QUEENSVIRBUL",
-    "supply": 592,
+    "supply": 600,
     "date": "2017-10-19",
     "img_url": "img/QUEENSVIRBUL.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/50045505120591762116821747931306611617540840984175043286171115108871514168257"
   },
   {
     "name": "REINFORCEMEN",
-    "supply": 295,
+    "supply": 300,
     "date": "2017-10-19",
     "img_url": "img/REINFORCEMEN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/88696263503294904388216464906697965248191259334640719360207131024046394866271"
   },
   {
     "name": "GUARDIANSOUR",
-    "supply": 589,
+    "supply": 599,
     "date": "2017-10-19",
     "img_url": "img/GUARDIANSOUR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/62979267350882415098310479321543403998214351125754872051598973781769588142681"
   },
   {
     "name": "CORRUPTEDTRO",
-    "supply": 298,
+    "supply": 300,
     "date": "2017-10-19",
     "img_url": "img/CORRUPTEDTRO.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/85610956922887509349464628817455397286964282968883869054833065164007235173814"
   },
   {
     "name": "MONSTERDEPTH",
-    "supply": 295,
+    "supply": 300,
     "date": "2017-10-19",
     "img_url": "img/MONSTERDEPTH.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/54122986366250708053525331419124156081411335092919187603230148062697052735340"
   },
   {
     "name": "ITLANEXPERTD",
-    "supply": 297,
+    "supply": 300,
     "date": "2017-10-19",
     "img_url": "img/ITLANEXPERTD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/35903049886670541396919882001720898708615031979376019740752144804166719572857"
   },
   {
     "name": "CARDMERCHANT",
-    "supply": 578,
+    "supply": 600,
     "date": "2017-10-19",
     "img_url": "img/CARDMERCHANT.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/111817711770640039690926196302242850836800708327716899304586662359270884003061"
   },
   {
     "name": "TRANSCENDEN",
-    "supply": 588,
+    "supply": 600,
     "date": "2017-10-24",
     "img_url": "img/TRANSCENDEN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/11460735661290540165168761098427095678037392616251635255271616051461681377539"
   },
   {
     "name": "DISTRICTOXCD",
-    "supply": 797,
+    "supply": 800,
     "date": "2017-10-24",
     "img_url": "img/DISTRICTOXCD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/20232709093193408936498056506538862335663437277671426126229809908201009241763"
   },
   {
     "name": "TROLLBERSERK",
-    "supply": 295,
+    "supply": 300,
     "date": "2017-10-25",
     "img_url": "img/TROLLBERSERK.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/9809327428707691192555578273247422852762079454742797495301433426741612023985"
   },
   {
     "name": "SOGHALLOWEEN",
-    "supply": 499,
+    "supply": 500,
     "date": "2017-10-29",
     "img_url": "img/SOGHALLOWEEN.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/88764778800831544271044423970693237028386634710516257826689098913028370534835"
@@ -1510,7 +1510,7 @@
   },
   {
     "name": "SELENACARD",
-    "supply": 694,
+    "supply": 700,
     "date": "2017-11-16",
     "img_url": "img/SELENACARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/2106354339514972340181923539352606758980121292948018070992309232753402750549"
@@ -1524,7 +1524,7 @@
   },
   {
     "name": "LYSANDERCARD",
-    "supply": 498,
+    "supply": 500,
     "date": "2017-11-16",
     "img_url": "img/LYSANDERCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/35043512455743462343090445299490678326857149131646186562399769769687268481064"
@@ -1545,13 +1545,13 @@
   },
   {
     "name": "BALABASTER",
-    "supply": 498,
+    "supply": 500,
     "date": "2017-12-01",
     "img_url": "img/BALABASTER.jpg"
   },
   {
     "name": "LALABASTER",
-    "supply": 397,
+    "supply": 400,
     "date": "2017-12-01",
     "img_url": "img/LALABASTER.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/4043620786646878756389430702974515556538001679065271538353722055090819080745"
@@ -1584,33 +1584,33 @@
   },
   {
     "name": "LRIKTHEFIGHT",
-    "supply": 289,
+    "supply": 300,
     "date": "2018-08-27",
     "img_url": "img/LRIKTHEFIGHT.png"
   },
   {
     "name": "ETHERMAGE",
-    "supply": 205,
+    "supply": 206,
     "date": "2018-10-10",
     "img_url": "img/ETHERMAGE.png",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/51212476481291677256981713023627449374999679087733808068510193289897020245685"
   },
   {
     "name": "ORCSASSAULT",
-    "supply": 296,
+    "supply": 300,
     "date": "2018-11-13",
     "img_url": "img/ORCSASSAULT.png"
   },
   {
     "name": "GUMMYYUMMY",
-    "supply": 499,
+    "supply": 500,
     "date": "2018-12-03",
     "img_url": "img/GUMMYYUMMY.png",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/84053570770071179213377106053599726724088122586658041733309265301133528417794"
   },
   {
     "name": "POLYMATHCARD",
-    "supply": 998,
+    "supply": 1000,
     "date": "2018-12-05",
     "img_url": "img/POLYMATHCARD.png"
   },
@@ -1622,44 +1622,44 @@
   },
   {
     "name": "SOGWEREWOLF",
-    "supply": 397,
+    "supply": 400,
     "date": "2019-06-24",
     "img_url": "img/SOGWEREWOLF.png"
   },
   {
     "name": "SOGJANUS",
-    "supply": 698,
+    "supply": 700,
     "date": "2019-07-18",
     "img_url": "img/SOGJANUS.png"
   },
   {
     "name": "SOGBCYBOX",
-    "supply": 970,
+    "supply": 975,
     "date": "2019-07-18",
     "img_url": "img/SOGBCYBOX.png"
   },
   {
     "name": "FIERCERABBIT",
-    "supply": 157,
+    "supply": 158,
     "date": "2019-07-18",
     "img_url": "img/FIERCERABBIT.png"
   },
   {
     "name": "SOGWILDHORSE",
-    "supply": 594,
+    "supply": 600,
     "date": "2019-07-18",
     "img_url": "img/SOGWILDHORSE.png"
   },
   {
     "name": "LIGHTWARRIOR",
-    "supply": 789,
+    "supply": 790,
     "date": "2019-09-04",
     "img_url": "img/LIGHTWARRIOR.png",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/23857075881967395881067683246647807581941560335008753754047272240743869351609"
   },
   {
     "name": "CROWWARRIOR",
-    "supply": 346,
+    "supply": 350,
     "date": "2019-09-04",
     "img_url": "img/CROWWARRIOR.png"
   },
@@ -1671,13 +1671,13 @@
   },
   {
     "name": "BEARSPIRIT",
-    "supply": 498,
+    "supply": 500,
     "date": "2019-09-04",
     "img_url": "img/BEARSPIRIT.png"
   },
   {
     "name": "SOGTHEARCHER",
-    "supply": 80,
+    "supply": 82,
     "date": "2019-09-04",
     "img_url": "img/SOGTHEARCHER.jpg"
   },
@@ -1737,13 +1737,13 @@
   },
   {
     "name": "SOGVENERIS",
-    "supply": 104,
+    "supply": 107,
     "date": "2022-11-18",
     "img_url": "img/SOGVENERIS.jpg"
   },
   {
     "name": "SOGMETA",
-    "supply": 112,
+    "supply": 111,
     "date": "2022-12-27",
     "img_url": "img/SOGMETA.jpg"
   },
@@ -1755,7 +1755,7 @@
   },
   {
     "name": "SOGCOINB",
-    "supply": 140,
+    "supply": 141,
     "date": "2023-02-03",
     "img_url": "img/SOGCOINB.jpg"
   },
@@ -1767,7 +1767,7 @@
   },
   {
     "name": "SOGELONMUSK",
-    "supply": 111,
+    "supply": 112,
     "date": "2023-04-03",
     "img_url": "img/SOGELONMUSK.jpg"
   },
@@ -1785,7 +1785,7 @@
   },
   {
     "name": "SOGETHMERGE",
-    "supply": 119,
+    "supply": 120,
     "date": "2023-04-13",
     "img_url": "img/SOGETHMERGE.jpg"
   },
@@ -1815,7 +1815,7 @@
   },
   {
     "name": "SOGBITHOTEL",
-    "supply": 135,
+    "supply": 136,
     "date": "2023-05-22",
     "img_url": "img/SOGBITHOTEL.jpg"
   },
