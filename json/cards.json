@@ -1742,6 +1742,12 @@
     "img_url": "img/SOGVENERIS.jpg"
   },
   {
+    "name": "SOGWINTER",
+    "supply": 2500,
+    "date": "2022-12-12",
+    "img_url": "img/SOGWINTER.jpg"
+  },
+  {
     "name": "SOGMETA",
     "supply": 111,
     "date": "2022-12-27",
