@@ -1854,5 +1854,11 @@
     "supply": 59,
     "date": "2024-05-12",
     "img_url": "img/SOGEVERTREE.jpg"
+  },
+  {
+    "name": "SOGCQUEEN",
+    "supply": 69,
+    "date": "2024-06-25",
+    "img_url": "img/SOGCQUEEN.jpg"
   }
 ]
