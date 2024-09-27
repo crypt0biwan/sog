@@ -1860,5 +1860,11 @@
     "supply": 69,
     "date": "2024-06-25",
     "img_url": "img/SOGCQUEEN.jpg"
+  },
+  {
+    "name": "SOGBULLVBEAR",
+    "supply": 61,
+    "date": "2024-08-05",
+    "img_url": "img/SOGBULLVBEAR.jpg"
   }
 ]
