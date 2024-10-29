@@ -2149,5 +2149,12 @@
     "date": "2024-08-05",
     "img_url": "img/SOGBULLVBEAR.jpg",
     "locked": false
+  },
+  {
+    "name": "SOGCRYPTOSEC",
+    "supply": 74,
+    "date": "2024-08-05",
+    "img_url": "img/SOGCRYPTOSEC.jpg",
+    "locked": false
   }
 ]
