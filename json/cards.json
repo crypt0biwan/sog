@@ -2148,13 +2148,20 @@
     "supply": 61,
     "date": "2024-08-05",
     "img_url": "img/SOGBULLVBEAR.jpg",
-    "locked": false
+    "locked": true
   },
   {
     "name": "SOGCRYPTOSEC",
     "supply": 74,
     "date": "2024-08-05",
     "img_url": "img/SOGCRYPTOSEC.jpg",
-    "locked": false
+    "locked": true
+  },
+  {
+    "name": "SOGBTCMAXI",
+    "supply": 57,
+    "date": "2024-08-05",
+    "img_url": "img/SOGBTCMAXI.jpg",
+    "locked": true
   }
 ]
