@@ -2163,5 +2163,12 @@
     "date": "2024-08-05",
     "img_url": "img/SOGBTCMAXI.jpg",
     "locked": true
+  },
+  {
+    "name": "SOGINSCRIPT",
+    "supply": 58,
+    "date": "2024-06-25",
+    "img_url": "img/SOGINSCRIPT.jpg",
+    "locked": false
   }
 ]
