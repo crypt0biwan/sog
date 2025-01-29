@@ -2170,5 +2170,12 @@
     "date": "2024-08-05",
     "img_url": "img/SOGBTCMAXI.jpg",
     "locked": true
+  },
+  {
+    "name": "SOGXCPMKTPL",
+    "supply": 300,
+    "date": "2024-10-15",
+    "img_url": "img/SOGXCPMKTPL.jpg",
+    "locked": true
   }
 ]
