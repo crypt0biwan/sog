@@ -2179,6 +2179,13 @@
     "locked": true
   },
   {
+    "name": "SOGNFTMUSEUM",
+    "supply": 300,
+    "date": "2024-10-15",
+    "img_url": "img/SOGNFTMUSEUM.jpg",
+    "locked": true
+  },
+  {
     "name": "BANKGOBLINCD",
     "supply": 500,
     "date": "2024-11-18",
