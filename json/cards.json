@@ -2176,27 +2176,44 @@
     "supply": 300,
     "date": "2024-10-15",
     "img_url": "img/SOGXCPMKTPL.jpg",
-    "locked": true
+    "locked": true,
+    "block": 865772,
+    "tx_index": 2758825
   },
   {
     "name": "SOGSAYLOR",
     "supply": 300,
     "date": "2024-10-15",
     "img_url": "img/SOGSAYLOR.jpg",
-    "locked": true
+    "locked": true,
+    "block": 865772,
+    "tx_index": 2758826
   },
   {
     "name": "SOGNFTMUSEUM",
     "supply": 300,
     "date": "2024-10-15",
     "img_url": "img/SOGNFTMUSEUM.jpg",
-    "locked": true
+    "locked": true,
+    "block": 865772,
+    "tx_index": 2758827
+  },
+  {
+    "name": "SOGBCYBACK",
+    "supply": 300,
+    "date": "2024-10-15",
+    "img_url": "img/SOGBCYBACK.jpg",
+    "locked": true,
+    "block": 865772,
+    "tx_index": 2758828
   },
   {
     "name": "BANKGOBLINCD",
     "supply": 500,
     "date": "2024-11-18",
     "img_url": "img/BANKGOBLINCD.jpg",
-    "locked": true
+    "locked": true,
+    "block": 870882,
+    "tx_index": 2966758
   }
 ]
