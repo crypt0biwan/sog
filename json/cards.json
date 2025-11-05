@@ -2215,5 +2215,14 @@
     "locked": true,
     "block": 870882,
     "tx_index": 2966758
+  },
+  {
+    "name": "CZCARD",
+    "supply": 300,
+    "date": "2025-10-14",
+    "img_url": "img/CZCARD.jpg",
+    "locked": false,
+    "block": 919006,
+    "tx_index": 3094270
   }
 ]
