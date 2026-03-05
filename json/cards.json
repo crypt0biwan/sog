@@ -2221,8 +2221,17 @@
     "supply": 300,
     "date": "2025-10-14",
     "img_url": "img/CZCARD.jpg",
-    "locked": false,
+    "locked": true,
     "block": 919006,
     "tx_index": 3094270
+  },
+  {
+    "name": "LORDPEPECD",
+    "supply": 300,
+    "date": "2025-10-14",
+    "img_url": "img/LORDPEPECD.jpg",
+    "locked": true,
+    "block": 919007,
+    "tx_index": 3094274
   }
 ]
