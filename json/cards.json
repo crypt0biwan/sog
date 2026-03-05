@@ -2217,6 +2217,15 @@
     "tx_index": 2966758
   },
   {
+    "name": "XCHAINCARD",
+    "supply": 500,
+    "date": "2025-04-22",
+    "img_url": "img/XCHAINCARD.jpg",
+    "locked": false,
+    "block": 893490,
+    "tx_index": 3014184
+  },
+  {
     "name": "CZCARD",
     "supply": 300,
     "date": "2025-10-14",
