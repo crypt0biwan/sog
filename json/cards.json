@@ -181,7 +181,18 @@
     "date": "2015-10-23",
     "img_url": "img/CARDAUGUR.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/36580593239573281112144814118511929842934886595060227502015668311964746412524",
-    "locked": true
+    "locked": true,
+    "block": 	380189,
+    "tx_index": 341932
+  },
+  {
+    "name": "ROSSCARD",
+    "supply": 500,
+    "date": "2015-10-23",
+    "img_url": "img/ROSSCARD.jpg",
+    "locked": false,
+    "block": 380189,
+    "tx_index": 341933
   },
   {
     "name": "WHEREBCYCARD",
@@ -189,7 +200,9 @@
     "date": "2015-10-23",
     "img_url": "img/WHEREBCYCARD.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/99220116750275514782975819632671537397705620791257679825572258355713933682971",
-    "locked": true
+    "locked": true,
+    "block": 380193,
+    "tx_index": 341936
   },
   {
     "name": "CARDAIRBITZ",
@@ -197,7 +210,9 @@
     "date": "2015-10-23",
     "img_url": "img/CARDAIRBITZ.jpg",
     "emblem_vault": "https://opensea.io/assets/ethereum/0xdca91409018ea80b71d21e818f00e76072969861/32975890332339499079137219870914103086498052703308751647886918287678272252728",
-    "locked": true
+    "locked": true,
+    "block": 380195,
+    "tx_index": 341941
   },
   {
     "name": "XAJIARKETAAR",
@@ -2242,14 +2257,5 @@
     "locked": true,
     "block": 919007,
     "tx_index": 3094274
-  },
-  {
-    "name": "ROSSCARD",
-    "supply": 500,
-    "date": "2015-10-23",
-    "img_url": "img/ROSSCARD.jpg",
-    "locked": false,
-    "block": 380189,
-    "tx_index": 341933
   }
 ]
