@@ -2242,5 +2242,14 @@
     "locked": true,
     "block": 919007,
     "tx_index": 3094274
+  },
+  {
+    "name": "ROSSCARD",
+    "supply": 500,
+    "date": "2015-10-23",
+    "img_url": "img/ROSSCARD.jpg",
+    "locked": false,
+    "block": 380189,
+    "tx_index": 341933
   }
 ]
